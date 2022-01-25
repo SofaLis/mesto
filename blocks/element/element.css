@@ -1,0 +1,7 @@
+.element {
+    width: 282px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}

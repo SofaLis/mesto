@@ -5,7 +5,7 @@
     grid-template-rows: 61px 1fr;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 980px) {
     .profile__info {
         grid-template-columns: 254px 1fr;
         grid-template-rows: 28px 1fr;

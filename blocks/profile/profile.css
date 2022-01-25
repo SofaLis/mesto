@@ -4,7 +4,8 @@
     display: grid;
     grid-template-columns: 150px 336px 1fr;
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 980px) {
     .profile {
         width: calc(100% - (19px*2));
         margin: 42px auto 36px;
