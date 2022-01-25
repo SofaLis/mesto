@@ -9,8 +9,8 @@
 
 @media screen and (max-width: 980pxpx) {
     .profile__status {
+        margin: 14px 0 0;
         font-size: 14px;
         line-height: 17px;
-        margin: 14px 0 0;
     }
 } 

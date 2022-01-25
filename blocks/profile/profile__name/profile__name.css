@@ -9,10 +9,10 @@
 
 @media screen and (max-width: 980px) {
     .profile__name {
+        margin: 0;
         font-size: 27px;
         line-height: 33px;
         grid-column: 1;
         grid-row: 1;
-        margin: 0;
     }
 } 
