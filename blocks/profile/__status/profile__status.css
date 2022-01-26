@@ -7,7 +7,7 @@
     margin: 16px 0 0;
 }
 
-@media screen and (max-width: 980pxpx) {
+@media screen and (max-width: 980px) {
     .profile__status {
         margin: 14px 0 0;
         font-size: 14px;
