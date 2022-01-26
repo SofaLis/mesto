@@ -1,0 +1,12 @@
+.popup__icon-button {
+    width: 32px;
+    height: 32px;
+    background: url(../../../images/Close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    top: -40px;
+    right: -40px;
+    padding: 0;
+    position: absolute;
+}
