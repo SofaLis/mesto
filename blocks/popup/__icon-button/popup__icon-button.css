@@ -9,4 +9,9 @@
     right: -40px;
     padding: 0;
     position: absolute;
+    transition: opacity .3s;
 }
+
+.popup__icon-button:hover {
+    opacity: .6;
+  }

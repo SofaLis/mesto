@@ -7,4 +7,9 @@
     font-weight: 400;
     background-color: black;
     margin: 48px auto 37px;
+    transition: opacity .3s;
 }
+
+.popup__button:hover {
+    opacity: .8;
+  }
