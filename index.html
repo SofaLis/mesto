@@ -15,11 +15,11 @@
       <section class="profile">
         <img src="./images/image.jpg" alt="Ваша аватарка" class="profile__avatar">
         <div class="profile__info">
-          <button class="profile__edit-button"></button>
+          <button class="profile__edit-button" type="button" ></button>
           <h2 class="profile__name">Жак-Ив Кусто</h2>
           <p class="profile__status">Исследователь океана</p>
         </div>
-        <button class="profile__add-button"></button>
+        <button type="button" class="profile__add-button"></button>
       </section>
       <section class="elements">
         <ul class="elements__list">
@@ -71,13 +71,13 @@
     <footer class="footer">
       <p class="footer__text">© 2020 Mesto Russia</p>
     </footer>
-    <section class="popup popup_opened">
+    <section class="popup">
       <div class="popup__container">
         <form class="popup__admin">
-            <button class="popup__icon-button"></button>
+            <button type="button" class="popup__icon-button"></button>
             <h3 class="popup__heading">Редактировать профиль</h3>
-            <input type="text" class="popup__item" name="heading" placeholder="Имя" required>
-            <input type="text" class="popup__item" name="subheading" placeholder="О себе" required>
+            <input type="text" class="popup__item popup__item_name" name="heading" placeholder="Имя" required>
+            <input type="text" class="popup__item popup__item_job" name="subheading" placeholder="О себе" required>
             <button type="submit" class="popup__button" disabled="">Сохранить</button>
         </form>
       </div>
