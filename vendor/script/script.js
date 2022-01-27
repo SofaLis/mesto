@@ -28,7 +28,7 @@ ButtonClose.addEventListener('click', function ClosePopup() {
   function poputValue() {
     NameInput.value = userName.textContent;
     JobInput.value = userJop.textContent;
-    OpenPopup()
+    OpenPopup();
   }
 
 // Прикрепляем обработчик к форме:
