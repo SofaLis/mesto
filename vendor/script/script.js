@@ -10,27 +10,26 @@ let ButtonOpened = document.querySelector('.profile__edit-button');
 let Button = document.querySelector('.popup__button');
 let Heart = document.querySelector('.element__button');
 
-ButtonOpened.addEventListener ('click', function OpenPopup() {
+function openPopup() { 
     FormElement.classList.add('popup_opened');
-  });
+  }; 
 
-ButtonClose.addEventListener('click', function ClosePopup() {
+function closePopup() { 
     FormElement.classList.remove('popup_opened');
-  });
+  };
 
-  function formSubmitHandler(evt) {
+function poputValue() {
+    NameInput.value = userName.textContent;
+    JobInput.value = userJop.textContent;
+    openPopup();
+  };
+
+function formSubmitHandler(evt) {
     evt.preventDefault();
     userName.textContent = NameInput.value;
     userJop.textContent = JobInput.value;
-    ClosePopup();
+    closePopup();
   };
-  
-  function poputValue() {
-    NameInput.value = userName.textContent;
-    JobInput.value = userJop.textContent;
-    OpenPopup();
-  }
-
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
+ButtonOpened.addEventListener('click', openPopup());
+ButtonClose.addEventListener('click', closePopup());
 FormElement.addEventListener('submit', formSubmitHandler);
