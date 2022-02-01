@@ -1,4 +1,4 @@
-.popup__button {
+.popup__submit-button {
     color: white;
     width: calc(100% - (35px*2));
     height: 50px;
@@ -10,6 +10,6 @@
     transition: opacity .3s;
 }
 
-.popup__button:hover {
+.popup__submit-button:hover {
     opacity: .8;
   }

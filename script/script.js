@@ -5,9 +5,9 @@ let JobInput = FormElement.querySelector('.popup__item_job');
 let userName = document.querySelector('.profile__name');
 let userJop = document.querySelector('.profile__status');
 let ButtonAdd = document.querySelector('.profile__add-button');
-let ButtonClose = document.querySelector('.popup__icon-button');
+let ButtonClose = document.querySelector('.popup__close-button');
 let ButtonOpened = document.querySelector('.profile__edit-button');
-let Button = document.querySelector('.popup__button');
+let Button = document.querySelector('.popup__submit-button');
 let Heart = document.querySelector('.element__button');
 
 function poputValue() {
