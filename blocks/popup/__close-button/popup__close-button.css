@@ -10,8 +10,18 @@
     padding: 0;
     position: absolute;
     transition: opacity .3s;
+    background-size: cover;
 }
 
 .popup__close-button:hover {
     opacity: .6;
   }
+
+@media screen and (max-width: 553px) {
+    .popup__close-button {
+        top: -48px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+    }
+} 

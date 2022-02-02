@@ -9,3 +9,9 @@
     line-height: 17px;
     font-weight: 400;
 }
+
+@media screen and (max-width: 553px) {
+    .popup__item {
+        width: calc(100% - (22px*2));
+    }
+} 

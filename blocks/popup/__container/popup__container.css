@@ -6,3 +6,9 @@
     color: black;
     position: relative;
 }
+
+@media screen and (max-width: 553px) {
+    .popup__container {
+        max-width: 282px;
+    }
+} 
