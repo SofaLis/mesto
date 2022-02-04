@@ -22,56 +22,13 @@
         <button type="button" class="profile__add-button"></button>
       </section>
       <section class="elements">
-        <ul class="elements__list">
-          <li class="element">
-            <img class="element__image" src="./images/karachaevo.jpg" alt="Карачаевск">
-            <div class="element__caption">
-              <h3 class="element__name">Карачаевск</h3>
-              <button class="element__button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img class="element__image" src="./images/gora_elbrus.jpg" alt="Эльбрус">
-            <div class="element__caption">
-              <h3 class="element__name">Гора Эльбрус</h3>
-              <button class="element__button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img class="element__image" src="./images/domdai.jpg" alt="Домбай">
-            <div class="element__caption">
-              <h3 class="element__name">Домбай</h3>
-              <button class="element__button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img class="element__image" src="./images/piter.jpg" alt="Санкт-Петербург">
-            <div class="element__caption">
-              <h3 class="element__name">Санкт-Петербург</h3>
-              <button class="element__button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img class="element__image" src="./images/nahodka.jpg" alt="Находка">
-            <div class="element__caption">
-              <h3 class="element__name">Находка</h3>
-              <button class="element__button"></button>
-            </div>
-          </li>
-          <li class="element">
-            <img class="element__image" src="./images/vladivostok.jpg" alt="Владивосток">
-            <div class="element__caption">
-              <h3 class="element__name">Владивосток</h3>
-              <button class="element__button"></button>
-            </div>
-          </li>
-        </ul>
+        
       </section>
     </main>
     <footer class="footer">
       <p class="footer__text">© 2020 Mesto Russia</p>
     </footer>
-    <section class="popup">
+    <section class="popup popup_user">
       <div class="popup__container">
         <form class="popup__form" name="form-edit">
             <button type="button" class="popup__close-button"></button>
@@ -79,6 +36,36 @@
             <input type="text" class="popup__item popup__item_name" name="heading" placeholder="Имя" required>
             <input type="text" class="popup__item popup__item_job" name="subheading" placeholder="О себе" required>
             <button type="submit" class="popup__submit-button">Сохранить</button>
+        </form>
+      </div>
+    </section>
+    <section class="popup popup_cards">
+      <div class="popup__container">
+        <form class="popup__form" name="form-cards">
+            <button type="button" class="popup__close-button"></button>
+            <h3 class="popup__heading">Новое место</h3>
+            <input type="text" class="popup__item popup__card_name" name="heading" placeholder="Название" required>
+            <input type="text" class="popup__item popup__card_link" name="subheading" placeholder="Ссылка на картинку" required>
+            <button type="submit" class="popup__submit-button">Создать</button>
+        </form>
+      </div>
+    </section>
+    <template class="template">
+      <div class="element">
+        <button class="element__delete"></button>
+        <img class="element__image" src=" " alt=" ">
+        <div class="element__caption">
+          <h3 class="element__name"></h3>
+          <button class="element__button"></button>
+        </div>
+      </div>
+    </template>
+    <section class="popup popup_image">
+      <div class="popup__container-image">
+        <form class="popup__form" name="form-image">
+            <button type="button" class="popup__close-button"></button>
+            <img class="popup__image" src=" " alt=" ">
+            <h3 class="popup__name"></h3>
         </form>
       </div>
     </section>

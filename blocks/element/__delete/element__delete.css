@@ -1,15 +1,17 @@
-.element__button {
-    width: 22px;
+.element__delete {
+    width: 18px;
     height: 19px;
-    margin: 30px 30px 0 0px;
     padding: 0;
-    background: url(../../../images/heard_normal.svg);
+    background: url(../../../images/delete.svg);
     background-repeat: no-repeat;
     background-position: center;
     border: none;
     transition: opacity .3s;
+    top: 20px;
+    right: 20px;
+    position: absolute;
 }
 
-.element__button:hover {
+.element__delete:hover {
     opacity: .5;
   }
