@@ -20,14 +20,9 @@ const LinkInputCard = FormCard.querySelector('.popup__card_link');
 const ButtonCloseImg = FormImg.querySelector('.popup__close-button');
 const ImgPopup = FormImg.querySelector('.popup__image');
 const NamePopup = FormImg.querySelector('.popup__name');
-// Элементы для добавления карточек 
+// Место для карточек
 const Elements = document.querySelector('.elements');
-const Template = document.querySelector('.template').content;
-const Heart = document.querySelector('.element__button');
-const Delete = document.querySelector('.element__delete');
-const ImageCard = document.querySelector('.element__image');
-const Name = document.querySelector('.element__name');
-const ElementCard = document.querySelector('.element');
+// Первоначальный набор значений
 const initialCards = [
   {
     name: 'Архыз',
@@ -81,24 +76,47 @@ function closePopupUser() {
   closePopup(FormUser);
 };
 
+function closePopupImg() {
+  closePopup(FormImg);
+};
+
 function closePopupCard() {
   closePopup(FormCard);
 };
-
+//Функции отправки форм
 function formSubmitHandler(evt) {
     evt.preventDefault();
     userName.textContent = NameInput.value;
     userJop.textContent = JobInput.value;
     closePopupUser();
   };
-// обработчик события открытия и закрытия форм
+
+function FormCardSumit (evt) {
+  evt.preventDefault();
+    CreateCard({
+      name: NameInputCard.value,
+      link: LinkInputCard.value,
+    })  
+  closePopup(FormCard);
+}
+// обработчик событий форм
 ButtonAdd.addEventListener('click', openPopupCard); 
 ButtonOpened.addEventListener('click', openPopupUser);
 ButtonCloseUser.addEventListener('click', closePopupUser);
 ButtonCloseCard.addEventListener('click', closePopupCard);
+ButtonCloseImg.addEventListener('click', closePopupImg);
 FormUser.addEventListener('submit', formSubmitHandler);
+FormUser.addEventListener('submit', FormCardSumit);
 //функции создания новой карты
 function NewCard(item) {
+  const Template = document.querySelector('.template').content;
+  const TemplateClone = Template.cloneNode(true);
+  const Heart = TemplateClone.querySelector('.element__button');
+  const Delete = TemplateClone.querySelector('.element__delete');
+  const ImageCard = TemplateClone.querySelector('.element__image');
+  const Name = TemplateClone.querySelector('.element__name');
+  const ElementCard = TemplateClone.querySelector('.element');
+
   Name.textContent = item.name;
   ImageCard.src = item.link;
   ImageCard.alt = item.name;
@@ -112,20 +130,21 @@ function NewCard(item) {
   };
 
   function ClickImage() {
-    openPopup(FormCard);
+    NamePopup.textContent = item.name;
     ImgPopup.src = item.link;
     ImgPopup.alt = item.name;
+    openPopup(FormImg);
   };
 
   Heart.addEventListener('click', clickHeart);
   Delete.addEventListener('click', DeleteCard);
   ImageCard.addEventListener('click', ClickImage);
-  return ElementCard;
+  return TemplateClone;
 };
 
 function CreateCard(card) {
   CardElement = NewCard(card);
-  ElementCard.append(CardElement);
+  Elements.prepend(CardElement);
 };
 
 initialCards.forEach(CreateCard);
