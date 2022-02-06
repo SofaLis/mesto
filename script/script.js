@@ -14,8 +14,8 @@ const Button = document.querySelector('.popup__submit-button');
 // Элементы второй формы
 const ButtonAdd = document.querySelector('.profile__add-button');
 const ButtonCloseCard = FormCard.querySelector('.popup__close-button');
-const NameInputCard = FormCard.querySelector('.popup__card_name');
-const LinkInputCard = FormCard.querySelector('.popup__card_link');
+const NameInputCard = FormCard.querySelector('.popup__item_card_name');
+const LinkInputCard = FormCard.querySelector('.popup__item_card_link');
 // Элементы третьей формы
 const ButtonCloseImg = FormImg.querySelector('.popup__close-button');
 const ImgPopup = FormImg.querySelector('.popup__image');
