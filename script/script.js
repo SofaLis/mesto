@@ -98,6 +98,7 @@ function FormCardSumit (evt) {
       link: LinkInputCard.value,
     })  
   closePopup(FormCard);
+  FormCard.reset();
 }
 // обработчик событий форм
 ButtonAdd.addEventListener('click', openPopupCard); 

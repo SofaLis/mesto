@@ -33,8 +33,8 @@
         <form class="popup__form" name="form-edit">
             <button type="button" class="popup__close-button"></button>
             <h3 class="popup__heading">Редактировать профиль</h3>
-            <input type="text" class="popup__item popup__item_name" name="heading" placeholder="Имя" required>
-            <input type="text" class="popup__item popup__item_job" name="subheading" placeholder="О себе" required>
+            <input type="text" class="popup__item popup__item_name" name="heading" placeholder="Имя" required maxlength="11">
+            <input type="text" class="popup__item popup__item_job" name="subheading" placeholder="О себе" required maxlength="58">
             <button type="submit" class="popup__submit-button">Сохранить</button>
         </form>
       </div>
@@ -44,8 +44,8 @@
         <form class="popup__form" name="form-cards">
             <button type="button" class="popup__close-button"></button>
             <h3 class="popup__heading">Новое место</h3>
-            <input type="text" class="popup__item popup__card_name" name="heading" placeholder="Название" required>
-            <input type="text" class="popup__item popup__card_link" name="subheading" placeholder="Ссылка на картинку" required>
+            <input type="text" class="popup__item popup__card_name" name="heading" placeholder="Название">
+            <input type="url" class="popup__item popup__card_link" name="subheading" placeholder="Ссылка на картинку">
             <button type="submit" class="popup__submit-button">Создать</button>
         </form>
       </div>
