@@ -106,7 +106,7 @@ ButtonCloseUser.addEventListener('click', closePopupUser);
 ButtonCloseCard.addEventListener('click', closePopupCard);
 ButtonCloseImg.addEventListener('click', closePopupImg);
 FormUser.addEventListener('submit', formSubmitHandler);
-FormUser.addEventListener('submit', FormCardSumit);
+FormCard.addEventListener('submit', FormCardSumit);
 //функции создания новой карты
 function NewCard(item) {
   const Template = document.querySelector('.template').content;
