@@ -123,7 +123,7 @@ function NewCard(item) {
   ImageCard.alt = item.name;
 
   function clickHeart() {
-    Heart.style = 'background: url(images/Black.png)';
+    Heart.classList.toggle('element__button_active');
   };
 
   function DeleteCard() {
