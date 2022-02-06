@@ -11,6 +11,7 @@
     position: absolute;
     transition: opacity .3s;
     background-size: cover;
+    cursor: pointer;
 }
 
 .popup__close-button:hover {

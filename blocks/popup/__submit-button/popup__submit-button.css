@@ -8,6 +8,7 @@
     background-color: black;
     margin: 48px auto 37px;
     transition: opacity .3s;
+    cursor: pointer;
 }
 
 .popup__submit-button:hover {

@@ -4,6 +4,7 @@
     background: url(../../../images/heard_normal.svg);
     border: none;
     transition: opacity .3s;
+    cursor: pointer;
 }
 
 .element__button:hover {
