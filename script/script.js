@@ -6,7 +6,7 @@ const popupImg = document.querySelector('.popup_image');
 // Элементы первой формы
 const nameInput = popupUser.querySelector('.popup__item_name');
 const jobInput = popupUser.querySelector('.popup__item_job');
-const userName = document.querySelector('.profile__name');
+const username = document.querySelector('.profile__name');
 const userJop = document.querySelector('.profile__status');
 const buttonCloseUser = popupUser.querySelector('.popup__close-button');
 const buttonOpenedUser = document.querySelector('.profile__edit-button');
@@ -54,7 +54,7 @@ function openPopup(popup) {
 };
 
 function setProfileValues() {
-  nameInput.value = userName.textContent;
+  nameInput.value = username.textContent;
   jobInput.value = userJop.textContent;
 };
  
@@ -85,14 +85,14 @@ function closePopupCard() {
 //Функции отправки форм
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
-    userName.textContent = nameInput.value;
+    username.textContent = nameInput.value;
     userJop.textContent = jobInput.value;
     closePopupUser();
   };
 
 function handleCardFormSubmit (evt) {
   evt.preventDefault();
-    CreateCard({
+    createCard({
       name: nameInputCard.value,
       link: linkInputCard.value,
     })  
@@ -109,43 +109,43 @@ popupUser.addEventListener('submit', handleProfileFormSubmit);
 popupCard.addEventListener('submit', handleCardFormSubmit);
 //функции создания новой карты
 function getNewCard(item) {
-  const Template = document.querySelector('.template').content;
-  const TemplateClone = Template.cloneNode(true);
-  const Heart = TemplateClone.querySelector('.element__button');
-  const Delete = TemplateClone.querySelector('.element__delete');
-  const ImageCard = TemplateClone.querySelector('.element__image');
-  const Name = TemplateClone.querySelector('.element__name');
-  const ElementCard = TemplateClone.querySelector('.element');
+  const template = document.querySelector('.template').content;
+  const templateClone = template.cloneNode(true);
+  const heart = templateClone.querySelector('.element__button');
+  const deleteButton = templateClone.querySelector('.element__delete');
+  const imageCard = templateClone.querySelector('.element__image');
+  const name = templateClone.querySelector('.element__name');
+  const elementCard = templateClone.querySelector('.element');
 
-  Name.textContent = item.name;
-  ImageCard.src = item.link;
-  ImageCard.alt = item.name;
+  name.textContent = item.name;
+  imageCard.src = item.link;
+  imageCard.alt = item.name;
 
-  function clickHeart() {
-    Heart.classList.toggle('element__button_active');
+  function clickheart() {
+    heart.classList.toggle('element__button_active');
   };
 
-  function DeleteCard() {
-    ElementCard.remove();
+  function deleteCard() {
+    elementCard.remove();
   };
 
-  function ClickImage() {
+  function clickImage() {
     namePopup.textContent = item.name;
     imgPopup.src = item.link;
     imgPopup.alt = item.name;
     openPopup(popupImg);
   };
 
-  Heart.addEventListener('click', clickHeart);
-  Delete.addEventListener('click', DeleteCard);
-  ImageCard.addEventListener('click', ClickImage);
-  return TemplateClone;
+  heart.addEventListener('click', clickheart);
+  deleteButton.addEventListener('click', deleteCard);
+  imageCard.addEventListener('click', clickImage);
+  return templateClone;
 };
 
-function CreateCard(card) {
-  CardElement = getNewCard(card);
-  elements.prepend(CardElement);
+function createCard(card) {
+  const cardElement = getNewCard(card);
+  elements.prepend(cardElement);
 };
 
-initialCards.forEach(CreateCard);
+initialCards.forEach(createCard);
  
