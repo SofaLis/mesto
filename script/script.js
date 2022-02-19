@@ -1,7 +1,9 @@
+
 // Объявляем формы
 const popupUser = document.querySelector('.popup_user');
 const popupCard = document.querySelector('.popup_cards');
 const formCard = popupCard.querySelector('.popup__form');
+const forms = document.querySelectorAll('.popup');
 const popupImg = document.querySelector('.popup_image');
 // Элементы первой формы
 const nameInput = popupUser.querySelector('.popup__item_name');
@@ -48,66 +50,73 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ]; 
-//Функции открытия и закрытия форм
+//функция закрытия форм по нажатию на кнопочку и фон. 
+function click () {
+  forms.forEach( (popup) => {
+    popup.addEventListener('mousedown', (event) => {
+        if (event.target.classList.contains('popup_opened')) {
+          closePopup(popup);
+        };
+        if (event.target.classList.contains('popup__close-button')) {
+          closePopup(popup);
+        };
+    });
+  });
+};
+//закрытие при нажатии на esc
+function clickEsc(event) {
+  if (event.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  };
+};
+//функция открытия форм
 function openPopup(popup) { 
   popup.classList.add('popup_opened');
+  document.addEventListener("keyup", clickEsc);
+};
+//функция открытия формы для добавления карточек
+function openCardPoput() { 
+  openPopup(popupCard);
+};
+//закрытие форм
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', clickEsc);
 };
 
+//открытие формы пользователя
 function setProfileValues() {
   nameInput.value = username.textContent;
   jobInput.value = userJop.textContent;
-};
- 
-function openPopupUser() {
   openPopup(popupUser);
-  setProfileValues();
 };
 
-function openPopupCard() {
-  openPopup(popupCard);
-};
-
-function closePopup(popup) { 
-  popup.classList.remove('popup_opened');
-};
-
-function closePopupUser() {
-  closePopup(popupUser);
-};
-
-function closePopupImg() {
-  closePopup(popupImg);
-};
-
-function closePopupCard() {
-  closePopup(popupCard);
-};
-//Функции отправки форм
+//Функции отправки форм пользователя
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     username.textContent = nameInput.value;
     userJop.textContent = jobInput.value;
-    closePopupUser();
-  };
-
+    closePopup(popupUser);
+};
+//Функция отравки формы для добавления карточек
 function handleCardFormSubmit (evt) {
   evt.preventDefault();
     createCard({
       name: nameInputCard.value,
       link: linkInputCard.value,
-    })  
+    });  
   closePopup(popupCard);
   formCard.reset();
-}
-// обработчик событий форм
-buttonAdd.addEventListener('click', openPopupCard); 
-buttonOpenedUser.addEventListener('click', openPopupUser);
-buttonCloseUser.addEventListener('click', closePopupUser);
-buttonCloseCard.addEventListener('click', closePopupCard);
-buttonCloseImg.addEventListener('click', closePopupImg);
+};
+// обработчик событий
+click();
+buttonAdd.addEventListener('click', openCardPoput); 
+buttonOpenedUser.addEventListener('click', setProfileValues);
+buttonCloseUser.addEventListener('click',handleProfileFormSubmit);
 popupUser.addEventListener('submit', handleProfileFormSubmit);
 popupCard.addEventListener('submit', handleCardFormSubmit);
-//функции создания новой карты
+//функции создания новой карточки
 function getNewCard(item) {
   const template = document.querySelector('.template').content;
   const templateClone = template.cloneNode(true);

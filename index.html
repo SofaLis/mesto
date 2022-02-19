@@ -33,9 +33,11 @@
         <form class="popup__form" name="form-edit">
             <button type="button" class="popup__close-button"></button>
             <h3 class="popup__heading">Редактировать профиль</h3>
-            <input type="text" class="popup__item popup__item_name" name="heading" placeholder="Имя" required maxlength="11">
-            <input type="text" class="popup__item popup__item_job" name="subheading" placeholder="О себе" required maxlength="58">
-            <button type="submit" class="popup__submit-button">Сохранить</button>
+            <input type="text" id="name-input" class="popup__item popup__item_name" name="heading" placeholder="Имя" required maxlength="40" minlength="2">
+            <span class="popup__input-error name-input-error"></span>
+            <input type="text" id="job-input" class="popup__item popup__item_job" name="subheading" placeholder="О себе" required maxlength="200" minlength="2">
+            <span class="popup__input-error job-input-error"></span>
+            <button type="submit" class="popup__submit-button" disabled="disabled">Сохранить</button>
         </form>
       </div>
     </section>
@@ -44,9 +46,11 @@
         <form class="popup__form" name="form-cards">
             <button type="button" class="popup__close-button"></button>
             <h3 class="popup__heading">Новое место</h3>
-            <input type="text" class="popup__item popup__item_card_name" name="heading" placeholder="Название" required>
-            <input type="url" class="popup__item popup__item_card_link" name="subheading" placeholder="Ссылка на картинку" required>
-            <button type="submit" class="popup__submit-button">Создать</button>
+            <input type="text" id="card-name-input" class="popup__item popup__item_card_name" name="heading" placeholder="Название" required maxlength="30" minlength="2">
+            <span class="popup__input-error card-name-input-error"></span>
+            <input type="url" id="card-link-input" class="popup__item popup__item_card_link" name="subheading" placeholder="Ссылка на картинку" required>
+            <span class="popup__input-error card-link-input-error"></span>
+            <button type="submit" class="popup__submit-button" disabled="disabled">Создать</button>
         </form>
       </div>
     </section>
@@ -70,6 +74,7 @@
       </div>
     </section>
   </div>
-  <script src="./script/script.js"></script> 
+  <script src="./script/script.js"></script>
+  <script src="./script/valid.js"></script> 
 </body>
 </html>
