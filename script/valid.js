@@ -12,31 +12,33 @@ const hideInputError = (formElement, inputElement, {inputErrorClass, errorClassA
   errorElement.textContent = '';
 };
 
-const checkInputValidity = (formElement, inputElement) => {
+const checkInputValidity = (formElement, inputElement, classList) => {
   if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage);
+    showInputError(formElement, inputElement, inputElement.validationMessage, classList);
   } else {
-    hideInputError(formElement, inputElement);
+    hideInputError(formElement, inputElement, classList);
   }
 };
 
-const setEventListeners = (formElement, {inputSelector, submitButtonSelector}) => {
+const setEventListeners = (formElement, {inputSelector, submitButtonSelector}, classList) => {
   const inputList = Array.from(formElement.querySelectorAll(inputSelector));
   const buttonElement = formElement.querySelector(submitButtonSelector);
-  toggleButtonState(inputList, buttonElement);
+  toggleButtonState(inputList, buttonElement, classList);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener('input', function () {
-      checkInputValidity(formElement, inputElement);
+      checkInputValidity(formElement, inputElement, classList);
+      toggleButtonState(inputList, buttonElement, classList);
     });
   });
 };
 
-const enableValidation = ({formSelector}) => {
+const enableValidation = ({formSelector, ...rest}) => {
   const formList = Array.from(document.querySelectorAll(formSelector));
   formList.forEach((formElement) => {
     formElement.addEventListener('submit', (evt) => {
       evt.preventDefault();
     });
+    setEventListeners(formElement, rest);
   });
 };
 
@@ -55,6 +57,14 @@ const toggleButtonState = (inputList, buttonElement,  {inactiveButtonClass}) => 
     buttonElement.removeAttribute('disabled', '');
   }
 };
+
+function resetValidation(inputList, buttonElement, formElement) { 
+  toggleButtonState(inputList, buttonElement); 
+
+  inputList.forEach((inputElement) => { 
+    hideInputError(formElement, inputElement); 
+  }); 
+} 
   
   enableValidation({
     //Класс самой формы
