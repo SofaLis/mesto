@@ -5,6 +5,9 @@ const popupCard = document.querySelector('.popup_cards');
 const formCard = popupCard.querySelector('.popup__form');
 const forms = document.querySelectorAll('.popup');
 const popupImg = document.querySelector('.popup_image');
+const form = document.querySelector('.popup');
+const submitForm = form.querySelector('.popup__submit-button');
+const inputs =  Array.from(form.querySelectorAll('.popup__item'));
 // Элементы первой формы
 const nameInput = popupUser.querySelector('.popup__item_name');
 const jobInput = popupUser.querySelector('.popup__item_job');
@@ -74,6 +77,7 @@ function clickEsc(event) {
 function openPopup(popup) { 
   popup.classList.add('popup_opened');
   document.addEventListener("keyup", clickEsc);
+  resetValidation(inputs, submitForm, form, validationConfig);
 };
 //функция открытия формы для добавления карточек
 function openCardPoput() { 
