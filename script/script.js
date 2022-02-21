@@ -2,7 +2,6 @@
 // Объявляем формы
 const popupUser = document.querySelector('.popup_user');
 const popupCard = document.querySelector('.popup_cards');
-const formCard = popupCard.querySelector('.popup__form');
 const forms = document.querySelectorAll('.popup');
 const popupImg = document.querySelector('.popup_image');
 const form = document.querySelector('.popup');
@@ -15,6 +14,7 @@ const username = document.querySelector('.profile__name');
 const userJop = document.querySelector('.profile__status');
 const buttonCloseUser = popupUser.querySelector('.popup__close-button');
 const buttonOpenedUser = document.querySelector('.profile__edit-button');
+const formUser = popupUser.querySelector('.popup__form_user');
 // Элементы второй формы
 const buttonAdd = document.querySelector('.profile__add-button');
 const buttonCloseCard = popupCard.querySelector('.popup__close-button');
@@ -24,6 +24,7 @@ const linkInputCard = popupCard.querySelector('.popup__item_card_link');
 const buttonCloseImg = popupImg.querySelector('.popup__close-button');
 const imgPopup = popupImg.querySelector('.popup__image');
 const namePopup = popupImg.querySelector('.popup__name');
+const formCard = popupCard.querySelector('.popup__form_card');
 // Место для карточек
 const elements = document.querySelector('.elements');
 // Первоначальный набор значений
@@ -77,11 +78,11 @@ function clickEsc(event) {
 function openPopup(popup) { 
   popup.classList.add('popup_opened');
   document.addEventListener("keyup", clickEsc);
-  resetValidation(inputs, submitForm, form, validationConfig);
 };
 //функция открытия формы для добавления карточек
 function openCardPoput() { 
   openPopup(popupCard);
+  resetValidation(inputs, submitForm, form, validationConfig);
 };
 //закрытие форм
 function closePopup(popup) {
@@ -91,9 +92,10 @@ function closePopup(popup) {
 
 //открытие формы пользователя
 function setProfileValues() {
+  openPopup(popupUser);
   nameInput.value = username.textContent;
   jobInput.value = userJop.textContent;
-  openPopup(popupUser);
+  resetValidation(inputs, submitForm, form, validationConfig);
 };
 
 //Функции отправки форм пользователя
@@ -141,7 +143,7 @@ function getNewCard(item) {
   function deleteCard() {
     elementCard.remove();
   };
-
+  //функция открытия карточки
   function clickImage() {
     namePopup.textContent = item.name;
     imgPopup.src = item.link;
