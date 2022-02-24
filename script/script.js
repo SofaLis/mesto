@@ -20,6 +20,8 @@ const buttonAdd = document.querySelector('.profile__add-button');
 const buttonCloseCard = popupCard.querySelector('.popup__close-button');
 const nameInputCard = popupCard.querySelector('.popup__item_card_name');
 const linkInputCard = popupCard.querySelector('.popup__item_card_link');
+const inputsCard =  Array.from(popupCard.querySelectorAll('.popup__item'));
+const submitCard = popupCard.querySelector('.popup__submit-button');
 // Элементы третьей формы
 const buttonCloseImg = popupImg.querySelector('.popup__close-button');
 const imgPopup = popupImg.querySelector('.popup__image');
@@ -81,7 +83,7 @@ function openPopup(popup) {
 };
 //функция открытия формы для добавления карточек
 function openCardPopup() { 
-  resetValidation(inputs, submitForm, form, validationConfig);
+  resetValidation(inputsCard, submitCard, formCard, validationConfig);
   formCard.reset();
   openPopup(popupCard);
 };
@@ -120,6 +122,7 @@ function handleCardFormSubmit (evt) {
   closePopup(popupCard);
   formCard.reset();
 };
+
 // обработчик событий
 closeForm();
 buttonAdd.addEventListener('click', openCardPopup); 
