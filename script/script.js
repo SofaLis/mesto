@@ -1,5 +1,6 @@
 //Экспортируем данные
 import {validationConfig, FormValidator} from './valid.js'; 
+import {Card} from './card.js';
 // Объявляем формы
 const popupUser = document.querySelector('.popup_user');
 const popupCard = document.querySelector('.popup_cards');
@@ -57,6 +58,7 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ]; 
+
 //функция закрытия форм по нажатию на кнопочку и фон. 
 function closeForm () {
   forms.forEach( (popup) => {
@@ -132,52 +134,8 @@ buttonCloseUser.addEventListener('click', closeUser);
 popupUser.addEventListener('submit', handleProfileFormSubmit);
 popupCard.addEventListener('submit', handleCardFormSubmit);
 
-
-//активация сердечка
-function clickheart(heartButton) {
-  heartButton.classList.toggle('element__button_active');
-};
-
-//удаления карты
-function deleteCard(deleteElement) {
-  deleteElement.remove();
-};
-
-//Функция увеличения картинки по клику
-function clickImage(itemClick) {
-  namePopup.textContent = itemClick.name;
-  imgPopup.src = itemClick.link;
-  imgPopup.alt = itemClick.name;
-  openPopup(popupImg);
-};
-
-//функции создания новой карточки
-function getNewCard(item) {
-  const template = document.querySelector('.template').content;
-  const templateClone = template.cloneNode(true);
-  const heart = templateClone.querySelector('.element__button');
-  const deleteButton = templateClone.querySelector('.element__delete');
-  const imageCard = templateClone.querySelector('.element__image');
-  const name = templateClone.querySelector('.element__name');
-  const elementCard = templateClone.querySelector('.element');
-
-  name.textContent = item.name;
-  imageCard.src = item.link;
-  imageCard.alt = item.name;
-
-  heart.addEventListener('click', () => {clickheart(heart)});
-  deleteButton.addEventListener('click', () => {deleteCard(elementCard)});
-  imageCard.addEventListener('click', () => {clickImage(item)});
-  return templateClone;
-};
-
-function createCard(card) {
-  const cardElement = getNewCard(card);
-  elements.prepend(cardElement);
-};
-
-initialCards.forEach(createCard);
- 
+const cardClass = new Card(popupImg, elements);
+initialCards.forEach(cardClass.createCard);
 
 const formValidatoruser = new FormValidator(validationConfig, popupUser);
 formValidatoruser.enableValidation();

@@ -15,7 +15,7 @@ export const validationConfig = {
   errorClass: 'popup__input-error'
 }
 
-export class FormValidator{
+export class FormValidator {
   constructor(validationConfig, formElement){
       this._formElement = formElement;
       this._inputSelector = validationConfig.inputSelector;
