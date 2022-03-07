@@ -180,7 +180,8 @@ initialCards.forEach(createCard);
  
 
 const formValidatoruser = new FormValidator(validationConfig, popupUser);
+formValidatoruser.enableValidation();
 
 
 const formValidatorCard = new FormValidator(validationConfig, popupCard);
-
+formValidatorCard.enableValidation();
