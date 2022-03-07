@@ -1,4 +1,5 @@
-
+//Экспортируем данные
+import {validationConfig, FormValidator} from './valid.js'; 
 // Объявляем формы
 const popupUser = document.querySelector('.popup_user');
 const popupCard = document.querySelector('.popup_cards');
@@ -83,7 +84,7 @@ function openPopup(popup) {
 };
 //функция открытия формы для добавления карточек
 function openCardPopup() { 
-  resetValidation(inputsCard, submitCard, formCard, validationConfig);
+  formValidatorCard.resetValidation();
   formCard.reset();
   openPopup(popupCard);
 };
@@ -99,7 +100,7 @@ function closeUser() {
 
 //открытие формы пользователя
 function setProfileValues() {
-  resetValidation(inputs, submitForm, form, validationConfig);
+  formValidatoruser.resetValidation();
   openPopup(popupUser);
   nameInput.value = username.textContent;
   jobInput.value = userJop.textContent;
@@ -177,3 +178,9 @@ function createCard(card) {
 
 initialCards.forEach(createCard);
  
+
+const formValidatoruser = new FormValidator(validationConfig, popupUser);
+
+
+const formValidatorCard = new FormValidator(validationConfig, popupCard);
+
