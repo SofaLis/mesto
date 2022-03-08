@@ -1,45 +1,48 @@
+import {clickImage} from './script.js';
+export const settingsObject = {
+    template: '.template',
+    like: '.element__button',
+    delete: '.element__delete',
+    img: '.element__image',
+    title: '.element__name',
+    element: '.element',
+    clickImg: clickImage,
+}
+
 
 export class Card {
-    constructor(popup, cardNew){
-        this._template = document.querySelector('.template').content;
-        this._templateClone = this._template.cloneNode(true);
-        this._heartButton = this._templateClone.querySelector('.element__button');
-        this._deleteElement = this._templateClone.querySelector('.element__delete');
-        this._imgPopup = popup.querySelector('.popup__image');
-        this._namePopup = popup.querySelector('.popup__name');
-        this._imageCard = this._templateClone.querySelector('.element__image');
-        this._name = this._templateClone.querySelector('.element__name');
-        this._elementCard = this._templateClone.querySelector('.element');
-        this._cardNew = cardNew;
-
+    constructor(name, link, settingsObject){
+        this._link = link;
+        this._name = name;
+        this._template = settingsObject.template.content;
+        this._heartButton = settingsObject.like;
+        this._deleteElement = settingsObject.delete;
+        this._imageCard = settingsObject.img;
+        this._title = settingsObject.title;
+        this._elementCard = settingsObject.element;
+        this._clickImg = settingsObject.clickImg;
     }
     _clickheart() {
         this._heartButton.classList.toggle('element__button_active');
     };
     //удаления карты
     _deleteCard() {
-        this._deleteElement.remove();
-    };
-    //Функция увеличения картинки по клику
-    _clickImage() {
-        this._namePopup.textContent = this._cardNew.name;
-        this._imgPopup.src = this._cardNew.link;
-        this._imgPopup.alt = this._cardNew.name;
-        openPopup(popup);
+        this._elementCard.remove();
     };
       //функции создания новой карточки
-    _getNewCard() {
-        this._name.textContent = this._cardNew.name;
-        this._imageCard.src = this._cardNew.link;
-        this._imageCard.alt = this._cardNew.name;
-  
+    getNewCard() {
+        this._title.textContent =  this._name;
+        this._imageCard.src = this._link;
+        this._imageCard.alt = this._name;
         this._heartButton.addEventListener('click', () => {this._clickheart()});
         this._deleteElement.addEventListener('click', () => {this._deleteCard()});
-        this._imageCard.addEventListener('click', () => {this._clickImage()});
+        this._imageCard.addEventListener('click', () => {this._clickImg});
         return this._templateClone;
     };
-    createCard() {
-        const cardElement = this._getNewCard();
-        this._cardNew.prepend(cardElement);
-    };
+}
+
+export function createCard(name, link, settingsObject) {
+    const card = new Card(name, link, settingsObject)
+    const cardElement = card.getNewCard();
+    return cardElement; 
 }

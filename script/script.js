@@ -1,6 +1,7 @@
 //Экспортируем данные
 import {validationConfig, FormValidator} from './valid.js'; 
-import {Card} from './card.js';
+import {Card, settingsObject, createCard} from './card.js';
+
 // Объявляем формы
 const popupUser = document.querySelector('.popup_user');
 const popupCard = document.querySelector('.popup_cards');
@@ -26,11 +27,8 @@ const inputsCard =  Array.from(popupCard.querySelectorAll('.popup__item'));
 const submitCard = popupCard.querySelector('.popup__submit-button');
 // Элементы третьей формы
 const buttonCloseImg = popupImg.querySelector('.popup__close-button');
-const imgPopup = popupImg.querySelector('.popup__image');
 const namePopup = popupImg.querySelector('.popup__name');
 const formCard = popupCard.querySelector('.popup__form_card');
-// Место для карточек
-const elements = document.querySelector('.elements');
 // Первоначальный набор значений
 const initialCards = [
   {
@@ -133,6 +131,17 @@ buttonOpenedUser.addEventListener('click', setProfileValues);
 buttonCloseUser.addEventListener('click', closeUser);
 popupUser.addEventListener('submit', handleProfileFormSubmit);
 popupCard.addEventListener('submit', handleCardFormSubmit);
+
+export function clickImage() {
+  imgPopup = popup.querySelector('.popup__image');
+  namePopup = popup.querySelector('.popup__name');
+  namePopup.textContent = initialCards.name;
+  imgPopup.src = initialCards.link;
+  imgPopup.alt =initialCards.name;
+  openPopup(popup);
+};
+
+createCard(initialCards.name, initialCards.link, settingsObject);
 
 const cardClass = new Card(popupImg, elements);
 initialCards.forEach(cardClass.createCard);
