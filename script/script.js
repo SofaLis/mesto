@@ -1,6 +1,6 @@
 //Экспортируем данные
 import {validationConfig, FormValidator} from './valid.js'; 
-import {Card, settingsObject, createCard} from './card.js';
+import {Card, settingsObject} from './card.js';
 
 // Объявляем формы
 const popupUser = document.querySelector('.popup_user');
@@ -116,10 +116,7 @@ function handleProfileFormSubmit(evt) {
 //Функция отравки формы для добавления карточек
 function handleCardFormSubmit (evt) {
   evt.preventDefault();
-    createCard({
-      name: nameInputCard.value,
-      link: linkInputCard.value,
-    });  
+    createCards(initialCards.name, initialCards.link, settingsObject );  
   closePopup(popupCard);
   formCard.reset();
 };
@@ -132,19 +129,20 @@ buttonCloseUser.addEventListener('click', closeUser);
 popupUser.addEventListener('submit', handleProfileFormSubmit);
 popupCard.addEventListener('submit', handleCardFormSubmit);
 
-export function clickImage() {
-  imgPopup = popup.querySelector('.popup__image');
-  namePopup = popup.querySelector('.popup__name');
-  namePopup.textContent = initialCards.name;
-  imgPopup.src = initialCards.link;
-  imgPopup.alt =initialCards.name;
-  openPopup(popup);
+export function clickImage (name, link) {
+  namePopup.textContent = name;
+  popupImg.src = link;
+  popupImg.alt = name;
+  openPopup(popupImg);
 };
 
-createCard(initialCards.name, initialCards.link, settingsObject);
+  function createCards(name, link, settingsObject) {
+  const card = new Card(name, link, settingsObject)
+  const cardElement = card.getNewCard();
+  return cardElement; 
+}
 
-const cardClass = new Card(popupImg, elements);
-initialCards.forEach(cardClass.createCard);
+
 
 const formValidatoruser = new FormValidator(validationConfig, popupUser);
 formValidatoruser.enableValidation();
