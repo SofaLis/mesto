@@ -19,15 +19,15 @@ export class Card {
         this._deleteElement = settingsObject.delete;
         this._imageCard = settingsObject.img;
         this._title = settingsObject.title;
-        this._elementCard = settingsObject.element;
+        this._element = settingsObject.element;
         this._clickImg = settingsObject.clickImg;
     }
     _clickheart(like) {
         like.classList.toggle('element__button_active');
     };
     //удаления карты
-    _deleteCard(element) {
-        element.remove();
+    _deleteCard(deleteElement) {
+        deleteElement.remove(); 
     };
     _getTemplate() {
         const templateClone  = document.querySelector(this._template).content.cloneNode(true);
@@ -40,11 +40,12 @@ export class Card {
         const titleCard = this._elementCard.querySelector(this._title);
         const likebtn = this._elementCard.querySelector(this._heartButton);
         const deletbtn = this._elementCard.querySelector(this._deleteElement);
+        const element = this._elementCard.querySelector(this._element);
         titleCard.textContent =  this._name;
         imgCard.src = this._link;
         imgCard.alt = this._name;
         likebtn.addEventListener('click', () => {this._clickheart(likebtn)});
-        deletbtn.addEventListener('click', () => {this._deleteCard(this._elementCard)});
+        deletbtn.addEventListener('click', () => {this._deleteCard(element)});
         imgCard.addEventListener('click', () => {this._clickImg(this._name, this._link)});
         return this._elementCard;
     };

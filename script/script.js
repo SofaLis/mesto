@@ -29,6 +29,7 @@ const submitCard = popupCard.querySelector('.popup__submit-button');
 const buttonCloseImg = popupImg.querySelector('.popup__close-button');
 const namePopup = popupImg.querySelector('.popup__name');
 const formCard = popupCard.querySelector('.popup__form_card');
+const imgBig = document.querySelector('.popup__image');
 // Первоначальный набор значений
 const initialCards = [
   {
@@ -113,14 +114,26 @@ function handleProfileFormSubmit(evt) {
     userJop.textContent = jobInput.value;
     closePopup(popupUser);
 };
-//Функция отравки формы для добавления карточек
+
+function createCards(name, link, settingsObject) {
+  const card = new Card(name, link, settingsObject)
+  const cardElement = card.getNewCard();
+  return cardElement; 
+};
+
+const container = document.querySelector('.elements');
+initialCards.forEach((i) => {
+  container.prepend(createCards(i.name, i.link, settingsObject));
+});
+
+
+
 function handleCardFormSubmit (evt) {
   evt.preventDefault();
-    createCards(initialCards.name, initialCards.link, settingsObject );  
+  container.prepend(createCards(nameInputCard.value, linkInputCard.value, settingsObject));  
   closePopup(popupCard);
   formCard.reset();
 };
-
 // обработчик событий
 closeForm();
 buttonAdd.addEventListener('click', openCardPopup); 
@@ -131,18 +144,10 @@ popupCard.addEventListener('submit', handleCardFormSubmit);
 
 export function clickImage (name, link) {
   namePopup.textContent = name;
-  popupImg.src = link;
-  popupImg.alt = name;
+  imgBig.src = link;
+  imgBig.alt = name;
   openPopup(popupImg);
 };
-
-  function createCards(name, link, settingsObject) {
-  const card = new Card(name, link, settingsObject)
-  const cardElement = card.getNewCard();
-  return cardElement; 
-}
-
-
 
 const formValidatoruser = new FormValidator(validationConfig, popupUser);
 formValidatoruser.enableValidation();
