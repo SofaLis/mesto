@@ -1,19 +1,3 @@
-export const validationConfig = {
-  //Класс самой формы
-  formSelector: '.popup__form',
-  //Класс поля формы
-  inputSelector: '.popup__item',
-  //Кнопка Сохранить
-  submitButtonSelector: '.popup__submit-button',
-  //Нерабочая кнопка сохранить
-  inactiveButtonClass: 'popup__submit-button_disabled',
-  //Неработающее поле формы
-  inputErrorClass: 'popup__item_type_error',
-  //Видимая ошибка
-  errorClassActive: 'popup__input-error_active',
-  //Ошибка
-  errorClass: 'popup__input-error'
-}
 
 export class FormValidator {
   constructor(validationConfig, formElement){
@@ -50,7 +34,7 @@ export class FormValidator {
     }
   };
 
-  _setEventListeners = () => {
+  setEventListeners = () => {
     this._toggleButtonState(this._inputList, this._buttonElement);
     this._inputList.forEach((inputElement) => {
       inputElement.addEventListener('input', () => {
@@ -60,22 +44,8 @@ export class FormValidator {
     });
   };
 
-  enableValidation = () => {
-    const formList = Array.from(document.querySelectorAll(this._formSelector));
-      this._formElement.addEventListener('submit', (evt) => {
-        evt.preventDefault();
-      });
-      this._setEventListeners();
-  };
-
-  _hasInvalidInput = (inputList) => {
-    return inputList.some((inputElement) => {
-      return !inputElement.validity.valid;
-    })
-  };
-
   _toggleButtonState = () => {
-    if (this._hasInvalidInput(this._inputList)) {
+    if (this._hasInvalidInput()) {
       this._buttonElement.classList.add(this._inactiveButtonClass);
       this._buttonElement.disabled = true;
     } else {
@@ -83,6 +53,13 @@ export class FormValidator {
       this._buttonElement.disabled = false;
     }
   };
+
+  _hasInvalidInput = () => {
+    return this._inputList.some((inputElement) => {
+      return !inputElement.validity.valid;
+    });
+  };
+
 
   resetValidation() { 
     this._toggleButtonState(this._inputList, this._buttonElement); 

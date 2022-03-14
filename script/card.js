@@ -1,14 +1,3 @@
-import {clickImage} from './script.js';
-export const settingsObject = {
-    template: '.template',
-    like: '.element__button',
-    delete: '.element__delete',
-    img: '.element__image',
-    title: '.element__name',
-    element: '.element',
-    clickImg: clickImage
-}
-
 
 export class Card {
     constructor(name, link, settingsObject){
@@ -27,7 +16,8 @@ export class Card {
     };
     //удаления карты
     _deleteCard(deleteElement) {
-        deleteElement.remove(); 
+        deleteElement.remove();
+        this._element = null;
     };
     _getTemplate() {
         const templateClone  = document.querySelector(this._template).content.cloneNode(true);

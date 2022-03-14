@@ -1,15 +1,13 @@
 //Экспортируем данные
-import {validationConfig, FormValidator} from './valid.js'; 
-import {Card, settingsObject} from './card.js';
+import {FormValidator} from './valid.js'; 
+import {Card} from './card.js';
+import {settingsObject, validationConfig, initialCards} from '../utils/constants.js';
 
 // Объявляем формы
 const popupUser = document.querySelector('.popup_user');
 const popupCard = document.querySelector('.popup_cards');
 const forms = document.querySelectorAll('.popup');
 const popupImg = document.querySelector('.popup_image');
-const form = document.querySelector('.popup');
-const submitForm = form.querySelector('.popup__submit-button');
-const inputs =  Array.from(form.querySelectorAll('.popup__item'));
 // Элементы первой формы
 const nameInput = popupUser.querySelector('.popup__item_name');
 const jobInput = popupUser.querySelector('.popup__item_job');
@@ -17,47 +15,14 @@ const username = document.querySelector('.profile__name');
 const userJop = document.querySelector('.profile__status');
 const buttonCloseUser = popupUser.querySelector('.popup__close-button');
 const buttonOpenedUser = document.querySelector('.profile__edit-button');
-const formUser = popupUser.querySelector('.popup__form_user');
 // Элементы второй формы
 const buttonAdd = document.querySelector('.profile__add-button');
-const buttonCloseCard = popupCard.querySelector('.popup__close-button');
 const nameInputCard = popupCard.querySelector('.popup__item_card_name');
 const linkInputCard = popupCard.querySelector('.popup__item_card_link');
-const inputsCard =  Array.from(popupCard.querySelectorAll('.popup__item'));
-const submitCard = popupCard.querySelector('.popup__submit-button');
 // Элементы третьей формы
-const buttonCloseImg = popupImg.querySelector('.popup__close-button');
 const namePopup = popupImg.querySelector('.popup__name');
 const formCard = popupCard.querySelector('.popup__form_card');
 const imgBig = document.querySelector('.popup__image');
-// Первоначальный набор значений
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-]; 
-
 //функция закрытия форм по нажатию на кнопочку и фон. 
 function closeForm () {
   forms.forEach( (popup) => {
@@ -101,10 +66,10 @@ function closeUser() {
 
 //открытие формы пользователя
 function setProfileValues() {
-  formValidatoruser.resetValidation();
   openPopup(popupUser);
   nameInput.value = username.textContent;
   jobInput.value = userJop.textContent;
+  formValidatoruser.resetValidation();
 };
 
 //Функции отправки форм пользователя
@@ -150,8 +115,8 @@ export function clickImage (name, link) {
 };
 
 const formValidatoruser = new FormValidator(validationConfig, popupUser);
-formValidatoruser.enableValidation();
+formValidatoruser.setEventListeners();
 
 
 const formValidatorCard = new FormValidator(validationConfig, popupCard);
-formValidatorCard.enableValidation();
+formValidatorCard.setEventListeners();
