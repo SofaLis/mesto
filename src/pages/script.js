@@ -1,15 +1,15 @@
 //Экспортируем данные
-import {FormValidator} from './valid.js'; 
+import {FormValidator} from '../components/FormValidator.js'; 
 import {initialCards, settingsObject, validationConfig, popupUser, 
   popupCard, userName, userJop, popupImg, buttonOpenedUser, 
   buttonAdd, nameInputCard, linkInputCard, nameInput, jobInput, popupUserGuery, popupCardGuery, elements} from '../utils/constants.js';
-import {PopupWithImage} from './popupWithImage.js';
-import {PopupWithForm} from './popupWithForm.js';
-import {UserInfo} from './userInfo.js';
-import { Section } from './section.js';
-import {Card} from './card.js';
+import {PopupWithImage} from '../components/PopupWithImage';
+import {PopupWithForm} from '../components/PopupWithForm.js';
+import {UserInfo} from '../components/UserInfo.js';
+import { Section } from '../components/Section.js';
+import {Card} from '../components/Card.js';
 
-import '../pages/index.css'
+import './index.css'
 //Валидация
 const formValidatorUser = new FormValidator(validationConfig, popupUserGuery);
 formValidatorUser.setEventListeners();
