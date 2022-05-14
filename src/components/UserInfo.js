@@ -12,7 +12,6 @@ export class UserInfo {
     }
 
     setUserInfo (item) {
-        console.log(item)
         this.elementName.textContent = item.nameInput;
         this.elementInfo.textContent = item.jobInput;
     }
