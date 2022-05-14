@@ -1,19 +1,19 @@
 export class UserInfo {
     constructor(elementName, elementInfo) {
-        this._elementName =  elementName;
-        this._elementInfo = elementInfo;
+        this.elementName =  elementName;
+        this.elementInfo = elementInfo;
     }
 
     getUserInfo () {
-        
         return {
-            name: this._elementName.textContent,
-            job: this._elementInfo.textContent
+            name: this.elementName.textContent,
+            job: this.elementInfo.textContent
         }
     }
 
-    setUserInfo (name, job) {
-        this._elementName.textContent = name;
-        this._elementInfo.textContent = job;
+    setUserInfo (item) {
+        console.log(item)
+        this.elementName.textContent = item.nameInput;
+        this.elementInfo.textContent = item.jobInput;
     }
 }

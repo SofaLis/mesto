@@ -20,12 +20,11 @@ formValidatorCard.setEventListeners();
 const userInfo = new UserInfo(userName, userJop);
 //Форма изменения ника и описания
 const popupWithFormUser = new PopupWithForm(popupUser, callbackFormUser)
-function callbackFormUser() {
-  userInfo.setUserInfo(nameInput.value, jobInput.value);
-};
+
 popupWithFormUser.setEventListeners();
 //Форма добавления карты
 const popupWithFormCard = new PopupWithForm(popupCard, callbackFormCard)
+
 popupWithFormCard.setEventListeners();
 //Окно с увеличинной картинкой//
 const popupWithImage = new PopupWithImage(popupImg);
@@ -49,14 +48,17 @@ const section = new Section ({
   }}, '.elements')
 section.rendererOne()
 
-function callbackFormCard() {
-  const item = {
-    title: nameInputCard.value,
-    link: linkInputCard.value
-  };
-  const newCard = createCard(item);
-  elements.prepend(newCard);
-};
+function callbackFormUser (data) {
+  userInfo.setUserInfo(data)
+}
+ 
+function callbackFormCard (data) {
+  const obj = {};
+  obj.title = data.heading;
+  obj.link = data.subheading;
+  const cardElement = createCard(obj);
+  elements.prepend(cardElement);
+}
 
 //вызов функции
 buttonOpenedUser.addEventListener('click', function () {

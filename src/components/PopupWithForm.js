@@ -4,16 +4,16 @@ export class PopupWithForm extends Popup {
         super(popupSelector);
         this._callbackForm = callbackForm;
         this._formCard = this._popupSelector.querySelector('.popup__form');
-        this._inputList = this._formCard.querySelectorAll('.popup__input');
+        this._inputList = this._formCard.querySelectorAll('.popup__item');
     }
 
-    _getInputValues () {
-        this._obj = {};
-        this._inputList.forEach(input => {
-            this._obj[input.name] = input.value;
-          });
-          return this._obj;
-    }
+    _getInputValues() {
+    this._obj = {}
+    Array.from(this._inputList).forEach((input) => {
+        this._obj[input.name] = input.value;
+    });
+    return this._obj;
+}
 
     setEventListeners () {
         super.setEventListeners();
