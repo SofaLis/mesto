@@ -2,7 +2,7 @@
 import {FormValidator} from '../components/FormValidator.js'; 
 import {initialCards, settingsObject, validationConfig, popupUser, 
   popupCard, userName, userJop, popupImg, buttonOpenedUser, 
-  buttonAdd, nameInputCard, linkInputCard, nameInput, jobInput, popupUserGuery, popupCardGuery, elements} from '../utils/constants.js';
+  buttonAdd, nameInputCard, linkInputCard, nameInput, jobInput, popupUserGuery, popupCardGuery, elements, popupAvatarGuery, avatar, popupAvatar, avatarOpened} from '../utils/constants.js';
 import {PopupWithImage} from '../components/PopupWithImage';
 import {PopupWithForm} from '../components/PopupWithForm.js';
 import {UserInfo} from '../components/UserInfo.js';
@@ -15,17 +15,18 @@ const formValidatorUser = new FormValidator(validationConfig, popupUserGuery);
 formValidatorUser.setEventListeners();
 const formValidatorCard = new FormValidator(validationConfig, popupCardGuery);
 formValidatorCard.setEventListeners();
+const formValidatorAvatar = new FormValidator(validationConfig, popupAvatarGuery);
+formValidatorAvatar.setEventListeners();
 
 //User info//
-const userInfo = new UserInfo(userName, userJop);
+const userInfo = new UserInfo(userName, userJop, avatar);
 //Форма изменения ника и описания
 const popupWithFormUser = new PopupWithForm(popupUser, callbackFormUser)
-
 popupWithFormUser.setEventListeners();
 //Форма добавления карты
 const popupWithFormCard = new PopupWithForm(popupCard, callbackFormCard)
-
 popupWithFormCard.setEventListeners();
+
 //Окно с увеличинной картинкой//
 const popupWithImage = new PopupWithImage(popupImg);
 popupWithImage.setEventListeners();
@@ -48,6 +49,7 @@ const section = new Section ({
   }}, '.elements')
 section.rendererOne()
 
+
 function callbackFormUser (data) {
   userInfo.setUserInfo(data)
 }
@@ -58,6 +60,11 @@ function callbackFormCard (data) {
   obj.link = data.subheading;
   const cardElement = createCard(obj);
   elements.prepend(cardElement);
+}
+
+function callbackFormAvatar (data) {
+  userInfo.addAvatar(data);
+  popupWithFormAvatar.close();
 }
 
 //вызов функции
@@ -73,3 +80,12 @@ buttonAdd.addEventListener ('click', function () {
   formValidatorCard.resetValidation();
   popupWithFormCard.open();
 })
+
+avatarOpened.addEventListener ('click', function () {
+  formValidatorAvatar.resetValidation();
+  popupWithFormAvatar.open();
+})
+
+//Avatar
+const popupWithFormAvatar = new PopupWithForm(popupAvatar, callbackFormAvatar)
+popupWithFormAvatar.setEventListeners();

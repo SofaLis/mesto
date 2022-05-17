@@ -11,7 +11,8 @@
       <img src="<%=require('./images/logo.svg')%>" alt="Логотип" class="header__logo"> 
     </header> 
     <main class="main"> 
-      <section class="profile"> 
+      <section class="profile">
+        <button class="profile__avatar_hover"></button>
         <img src="<%=require('./images/image.jpg')%>"  alt="Ваша аватарка" class="profile__avatar"> 
         <div class="profile__info"> 
           <div class="profile__container"> 
@@ -53,14 +54,37 @@
             <button type="submit" class="popup__submit-button" disabled="disabled">Создать</button> 
         </form> 
       </div> 
+    </section>
+    <section class="popup popup_delete">
+      <div class="popup__container"> 
+        <form class="popup__form popup__form_delete" name="form-delete">
+          <button type="button" class="popup__close-button"></button>
+          <h3 class="popup__heading popup__heading_delete">Вы уверены?</h3>
+          <button type="submit" class="popup__submit-button">Да</button>
+        </form>
+      </div>
+    </section>
+    <section class="popup popup_avatar"> 
+      <div class="popup__container"> 
+        <form class="popup__form popup__form_avatar" name="form-avatar"> 
+            <button type="button" class="popup__close-button"></button> 
+            <h3 class="popup__heading">Обновить аватар</h3> 
+            <input type="url" id="avatar-input" class="popup__item popup__item_name" name="avatarInput" placeholder="Ссылка на картинку" required> 
+            <span class="popup__input-error avatar-input-error"></span> 
+            <button type="submit" class="popup__submit-button" disabled="disabled">Сохранить</button> 
+        </form> 
+      </div> 
     </section> 
     <template class="template"> 
       <div class="element"> 
         <button class="element__delete"></button> 
         <img class="element__image" src=" " alt=" "> 
         <div class="element__caption"> 
-          <h3 class="element__name"></h3> 
-          <button class="element__button"></button> 
+          <h3 class="element__name"></h3>
+          <div class="element__case">
+            <button class="element__button"></button>
+            <span class="element__like">0</span>
+          </div>
         </div> 
       </div> 
     </template> 
