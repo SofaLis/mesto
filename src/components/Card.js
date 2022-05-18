@@ -1,11 +1,14 @@
 
 export class Card {
-    constructor({item, handleCardClick}, cardSelector){
+    constructor({item, handleCardClick, handleLikeClick, handleDeleteIconClick}, cardSelector){
         this._link = item.link;
         this._title = item.title;
         this._cardSelector = cardSelector;
         this._handleCardClick = handleCardClick;
+        this._handleLikeClick = handleLikeClick;
+        this._handleDeleteIconClick = handleDeleteIconClick;
     }
+    
     _clickheart(like) {
         like.classList.toggle('element__button_active');
     };
