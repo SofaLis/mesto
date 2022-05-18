@@ -49,7 +49,6 @@ const section = new Section ({
   }}, '.elements')
 section.rendererOne()
 
-
 function callbackFormUser (data) {
   userInfo.setUserInfo(data)
 }
