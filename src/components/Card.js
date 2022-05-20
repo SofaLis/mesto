@@ -1,26 +1,38 @@
 
 export class Card {
-    constructor({item, handleCardClick, handleLikeClick, handleDeleteIconClick}, cardSelector){
+    constructor({item, handleCardClick, handleLikeClick, handleDeleteIconClick}, userId, cardSelector){
         this._link = item.link;
         this._title = item.title;
+        this._alt = item.alt;
+        this._ownerid = item.owner._id;
+        this._likes = item.likes;
+        this._Id = item._id;
         this._cardSelector = cardSelector;
         this._handleCardClick = handleCardClick;
         this._handleLikeClick = handleLikeClick;
         this._handleDeleteIconClick = handleDeleteIconClick;
-    }
-    
-    _clickheart(like) {
-        like.classList.toggle('element__button_active');
+        this._userId = userId;
     };
-    //удаления карты
-    _deleteCard(deleteElement) {
-        deleteElement.remove();
-        this._element = null;
-    };
+
     _getTemplate() {
         const templateContent  = document.querySelector(this._cardSelector).content;
         return templateContent.querySelector('.element').cloneNode(true);
-    }
+    };
+    
+    _clickheart() {
+        this._likebtn = this._elementCard.querySelector('.element__button');
+        if (this._isLiked()) {
+            this._likebtn.classList.add('element__button_active')
+          } else {
+            this._likebtn.classList.remove('element__button_active');
+          }
+    };
+
+    //удаления карты
+    deleteCard() {
+        this._elementCard.remove();
+        this._elementCard = null;
+    };
     
     getNewCard() {
         this._elementCard = this._getTemplate();
@@ -35,7 +47,6 @@ export class Card {
 
     _setEventListeners() {
         this._imgCard =  this._elementCard.querySelector('.element__image');
-        this._likebtn = this._elementCard.querySelector('.element__button');
         this._deletbtn = this._elementCard.querySelector('.element__delete');
         this._element = this._elementCard.querySelector('.element');
         this._likebtn.addEventListener('click', () => {this._clickheart(this._likebtn)});
