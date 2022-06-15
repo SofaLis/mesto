@@ -1,0 +1,669 @@
+[33mcommit f42a0b37a8e69c27a1cb6e2a9d51a48530336b4d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31mor/main[m[33m)[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Fri May 20 19:50:21 2022 +0300
+
+    Pr9
+
+[33mcommit 58b481e29f102c61b228da6ecf8b9ba41ea25284[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Fri May 20 19:48:38 2022 +0300
+
+    Pr9
+
+[33mcommit 136084aed55b8b7cfc0f4858ce0166bd5cbe55b3[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Fri May 20 19:39:08 2022 +0300
+
+    Исправление ReadMe
+
+[33mcommit d07a6db2502ad543184dc7a3eee9cde3a086a848[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Fri May 20 19:33:16 2022 +0300
+
+    Pr9
+
+[33mcommit 0860881e6a8b3a9215450bdd85e4cc45efd5f999[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Wed May 18 15:11:34 2022 +0300
+
+    Исправление Git
+
+[33mcommit 906db55975b568495b18935214cdaf4d3e62f48b[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Wed May 18 13:23:02 2022 +0300
+
+    Исправление git
+
+[33mcommit 808440eab2a631737dfa92a14792828e3cbff9c6[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Wed May 18 13:21:47 2022 +0300
+
+    Исправление
+
+[33mcommit c8d78c442c99ea69afbfd349b5dac59968f75a83[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Wed May 18 01:02:30 2022 +0300
+
+    Настройка Pages
+
+[33mcommit 6a171c8f0bd037c0bd3adbdd7a8f483f22f424aa[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Tue May 17 04:19:09 2022 +0300
+
+    начало 9 работы
+
+[33mcommit b7ff65eabd5cdfa84cce77c89daa9882dad4fc45[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Sun May 15 01:39:08 2022 +0300
+
+    Удалила ненужный файл
+
+[33mcommit d8ae3937925ea4e3432f6810c12eefbc17c34fe7[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Sun May 15 01:37:43 2022 +0300
+
+    Исправление проблем с Git
+
+[33mcommit 2cdcee54b0633fe67a567ea71fc7445598b13534[m
+Merge: d837e35 5bd1f18
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Sun May 15 01:35:05 2022 +0300
+
+    Merge branch 'main' of github.com:SofaLis/mesto
+
+[33mcommit d837e359a1492b196f48c755ea816a9807492f45[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Sun May 15 01:31:58 2022 +0300
+
+    Pr9 new
+
+[33mcommit 5bd1f18e529545768e4b2aba025599a78d237070[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Sun May 15 01:28:31 2022 +0300
+
+    Pr9
+    
+    Pr9
+
+[33mcommit 5ebfd811652646b2f350d6bcce303146e18bc579[m
+Merge: 80a16eb f0a1b34
+Author: Sofalis <sofyaocherednaya@yandex.ru>
+Date:   Sun May 15 01:16:53 2022 +0300
+
+    Merge branch 'main' of github.com:SofaLis/mesto
+
+[33mcommit 80a16eb0bed46a03e1cf344574eaf9ce1569d124[m
+Author: Sofalis <sofyaocherednaya@yandex.ru>
+Date:   Sun May 15 00:42:51 2022 +0300
+
+    Pr9 -начало
+
+[33mcommit f8d7f3a9e5365a5b25a89663fba8dc731a4d737e[m
+Author: Sofalis <sofyaocherednaya@yandex.ru>
+Date:   Sat May 14 20:39:01 2022 +0300
+
+    Pr8 -part3
+
+[33mcommit 48e14838d6d7f1ddc2487e669d0084ab4979d399[m
+Author: Sofalis <sofyaocherednaya@yandex.ru>
+Date:   Thu May 12 22:58:58 2022 +0300
+
+    PR 8 -Part2
+
+[33mcommit bade237c1b80bdf5af0dba7159680b1f063e089d[m
+Author: SofaLis <sofyaocherednaya@yandex.ru>
+Date:   Wed May 11 19:20:34 2022 +0300
+
+    Пр8
+
+[33mcommit f0a1b346b75ffe30d013ee98ddae1d7801467daa[m[33m ([m[1;31morigi/main[m[33m)[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Mar 14 18:42:22 2022 +0300
+
+    Исправление первое ревью ПР6
+
+[33mcommit 61f803169836bb64e0c281fbcfa17f319d475d42[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Fri Mar 11 20:05:54 2022 +0300
+
+    Законченный функционал карточек
+
+[33mcommit fb4050c829f959b9d9f73381919f6a77eafaf3e6[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Wed Mar 9 20:30:25 2022 +0300
+
+    Функционал для добавления карточек
+
+[33mcommit 39f39f854ef4227e717a2a02dc60fe57d81cfc73[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Tue Mar 8 23:35:12 2022 +0300
+
+    Начала разработки селектора для добавления карты
+
+[33mcommit c5b63565341d085bafc6db851622dc39e08c0966[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Mar 7 23:40:50 2022 +0300
+
+    Начала разработки селектора для добавления карты
+
+[33mcommit 1d2d8bb799bc13358dccfcd31783e1e8ccc44850[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Mar 7 15:28:56 2022 +0300
+
+    Исправлен код валидации
+
+[33mcommit 61a6800bd62bde32e96037da0b5ebaff11695602[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Mar 7 13:38:35 2022 +0300
+
+    ПР7
+
+[33mcommit 9f39c696857474e1d036fe930908998a51aea25f[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Thu Feb 24 18:39:43 2022 +0300
+
+    Второ ревью ПР6, исправление валидации
+
+[33mcommit 12f4bf09d4f75ff5815961f613bcc3db12b371d3[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Wed Feb 23 06:01:53 2022 +0300
+
+    Исправление после первоего ревью ПР6
+
+[33mcommit a4c9730aa2e6a4621f447402ddbccc75bebf9a96[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Feb 21 19:04:32 2022 +0300
+
+    Сделана валидация, исправленны некоторые проблемы в Css
+
+[33mcommit 150d53ca036426e9aa3f5bcd82e75eaf26c16637[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Feb 21 16:51:31 2022 +0300
+
+    Исправление валидации
+
+[33mcommit 4a98ce20414e4ae10196b5deb6e9b2b3f63635fa[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Feb 21 00:33:43 2022 +0300
+
+    Исправление JS
+
+[33mcommit c10709ec8ff569df494be54eb4edefbcb18bd635[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Sun Feb 20 21:51:08 2022 +0300
+
+    Исправление JS
+
+[33mcommit cb22e8b9dae53d8a7956d83033578377b67ffc4b[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Sat Feb 19 20:47:41 2022 +0300
+
+    feat: практическая работа 6
+
+[33mcommit b898eddce9ecd6c0f1273edd01122ffba8b09843[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Tue Feb 8 17:51:47 2022 +0300
+
+    fix: испраления после второго ревью ПР5
+
+[33mcommit 03bb0f1c3fa03bfcab85b7868fca8eeef50e8647[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Feb 7 21:44:47 2022 +0300
+
+    fix: испраления после первого ревью ПР5
+
+[33mcommit 6a5d95eafe687f9163535f1ea0effddf4598405e[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Feb 7 21:40:24 2022 +0300
+
+    fix: испраления после первого ревью ПР5
+
+[33mcommit 6e541c1a90a05c05f1dc0ee27691388de9c56cf8[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Sun Feb 6 18:36:58 2022 +0300
+
+    Исправление тестов
+
+[33mcommit 4d5641db7d09e34c35b11fa029ea9642be98bd9f[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Sun Feb 6 06:18:09 2022 +0300
+
+    fix: исправили размеры картинок
+
+[33mcommit 7116e7b2f05a5abbb390a9b85d9c6db8b12db84e[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Sun Feb 6 05:53:43 2022 +0300
+
+    feat: сердце теперь переключается
+
+[33mcommit 2c4a35da59f70552e84acdbc70b134e2fa0ae2c4[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Sun Feb 6 04:51:27 2022 +0300
+
+    fix: настроили длину некоторым полям формы, исправили проблему с размером картинок, сделали форму обновляющейся
+
+[33mcommit 5a07518ccf00cee7ef59cb74f150dce2918235a5[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Sun Feb 6 04:02:16 2022 +0300
+
+    feat: добавили возможность добавлять карточки, fix: исправили баг со сплющенными сердцами
+
+[33mcommit d77f818fd19de7ba874a9fa42893edccd57d9b09[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Sun Feb 6 02:18:54 2022 +0300
+
+    Добавили возможность расщирения карточек, исправили добавление карточек через JS
+
+[33mcommit 984d0122264de90000e0101decf1ce87fbd0fbb4[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Sat Feb 5 01:59:08 2022 +0300
+
+    Js
+
+[33mcommit ff1f328c6aa38506da77ec5fab186416c4f37761[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Wed Feb 2 04:33:09 2022 +0300
+
+    fix: второе ревью
+
+[33mcommit 1f329395ab3c65943a945ca665333058a928753d[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Tue Feb 1 22:28:48 2022 +0300
+
+    fix:исправления после первого ревью
+
+[33mcommit cede273028f58fc2798936d484003907c1c802f4[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Thu Jan 27 20:09:40 2022 +0300
+
+    fix: исправление JS
+
+[33mcommit 26b05e3a337b498bbb2431a720b133992ea66208[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Thu Jan 27 19:39:38 2022 +0300
+
+    fix: исправление JS
+
+[33mcommit 50bc42e0b6580c0f0c1973f2196d558b14d9a290[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Thu Jan 27 17:08:47 2022 +0300
+
+    fix: исправление JS
+
+[33mcommit 1ad8c3b2341557eac4e4ecf8d0820e64c7a23380[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Thu Jan 27 17:07:19 2022 +0300
+
+    fix: исправление JS
+
+[33mcommit b6f21b7e6ea239ffa83cea02d83c06107f50fd5a[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Thu Jan 27 01:53:16 2022 +0300
+
+    feat:оформили файл README
+
+[33mcommit 68c6f6d0a8c1e1d02c9020704bb41b6c00074d0c[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Wed Jan 26 23:26:17 2022 +0300
+
+    fix: исправление по тестам
+
+[33mcommit 6373a4ca36de2173064d68e742bfb3cf2e5c0e76[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Wed Jan 26 23:19:18 2022 +0300
+
+    fix: исправлены названия папок, часть функций JS
+
+[33mcommit 498bc1dba524e6369621329e336487e14fc03a00[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Wed Jan 26 23:18:17 2022 +0300
+
+    fix: исправлены названия папок, часть функций JS
+
+[33mcommit 41eb0c60b5433a89d0a21a1015d508cb8557a55c[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Wed Jan 26 21:14:40 2022 +0300
+
+    Промежуточный результат
+
+[33mcommit 20830317770634bbc15657c3d2748f6b07ce31fd[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Wed Jan 26 04:53:43 2022 +0300
+
+    feat:сверстали блок popup
+
+[33mcommit 25a310d86b5cedd8357dc24f0269c4686a090d5d[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Tue Jan 25 23:08:05 2022 +0300
+
+    feat:сверстали блок footer
+
+[33mcommit 5d7a47d503e1cea54f94886c4fac4119cd0dcc71[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Tue Jan 25 17:21:09 2022 +0300
+
+    feat:сверстали блок profile
+
+[33mcommit 0f31b60732e7cdf86aec7e2a1e49045b9916afc5[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Tue Jan 25 17:19:04 2022 +0300
+
+    feat:сверстали блоки element и elements
+
+[33mcommit 7c16c803d8d17a94d530aeec07b58584b6cfb481[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Tue Jan 25 15:54:51 2022 +0300
+
+    feat:сверстали блок header
+
+[33mcommit a4fb2960aa709def2a969d84703d8af2979e69f6[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Tue Jan 25 15:54:03 2022 +0300
+
+    feat:сверстали блок header
+
+[33mcommit 266a6cbc771fe21848cb059fe5d86dea4d2691ab[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Tue Jan 25 15:50:01 2022 +0300
+
+    feat:сверстали блок profile
+
+[33mcommit f751ae379982c9040d26b55aa9222959de1e09de[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Jan 24 04:59:45 2022 +0300
+
+    feat:сверстали блок header
+
+[33mcommit 3cbfe7868c3a88b71728ee34d3981a98b5380f86[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Jan 24 04:29:07 2022 +0300
+
+    Исправления с расположением папок page и body
+
+[33mcommit 05f8184e4bcdc7ab0532c619bf49d5c627d74038[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Jan 24 04:12:47 2022 +0300
+
+    feat:Сверстали page
+
+[33mcommit 322100a2fd0899e269505f8cdf12aa8f8de0e754[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Jan 24 03:57:12 2022 +0300
+
+    feat:Сверстали body
+
+[33mcommit a56748bbfa4883d91a181ca6cd7eed90be547572[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Jan 24 03:46:06 2022 +0300
+
+    Начало работы
+
+[33mcommit 732780c8591a8ce9133a9df06f937461e358c8de[m
+Author: Sofya Lisovenko <sofyaocherednaya@yandex.ru>
+Date:   Mon Jan 24 03:34:44 2022 +0300
+
+    Начало работы
+
+[33mcommit db2b2e38ba9cb136740ef26092e95e6148491e21[m
+Author: SofaLis <94624304+SofaLis@users.noreply.github.com>
+Date:   Fri Jan 21 02:45:06 2022 +0300
+
+    Initial commit
+
+                   SSUUMMMMAARRYY OOFF LLEESSSS CCOOMMMMAANNDDSS
+
+      Commands marked with * may be preceded by a number, _N.
+      Notes in parentheses indicate the behavior if _N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MMOOVVIINNGG
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or _N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or _N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or _N lines).
+  b  ^B  ESC-v      *  Backward one window (or _N lines).
+  z                 *  Forward  one window (and set window to _N).
+  w                 *  Backward one window (and set window to _N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to _N).
+  u  ^U             *  Backward one half-window (and set half-window to _N).
+  ESC-)  RightArrow *  Right one half screen width (or _N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or _N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SSEEAARRCCHHIINNGG
+
+  /_p_a_t_t_e_r_n          *  Search forward for (_N-th) matching line.
+  ?_p_a_t_t_e_r_n          *  Search backward for (_N-th) matching line.
+  n                 *  Repeat previous search (for _N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  ESC-U                Clear search highlighting.
+  &_p_a_t_t_e_r_n          *  Display only matching lines.
+        ---------------------------------------------------
+        A search pattern may begin with one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+        ^K       Highlight matches, but don't move (KEEP position).
+        ^R       Don't use REGULAR EXPRESSIONS.
+        ^W       WRAP search if no match found.
+ ---------------------------------------------------------------------------
+
+                           JJUUMMPPIINNGG
+
+  g  <  ESC-<       *  Go to first line in file (or line _N).
+  G  >  ESC->       *  Go to last line in file (or line _N).
+  p  %              *  Go to beginning of file (or _N percent into file).
+  t                 *  Go to the (_N-th) next tag.
+  T                 *  Go to the (_N-th) previous tag.
+  {  (  [           *  Find close bracket } ) ].
+  }  )  ]           *  Find open bracket { ( [.
+  ESC-^F _<_c_1_> _<_c_2_>  *  Find close bracket _<_c_2_>.
+  ESC-^B _<_c_1_> _<_c_2_>  *  Find open bracket _<_c_1_>.
+        ---------------------------------------------------
+        Each "find close bracket" command goes forward to the close bracket 
+          matching the (_N-th) open bracket in the top line.
+        Each "find open bracket" command goes backward to the open bracket 
+          matching the (_N-th) close bracket in the bottom line.
+
+  m_<_l_e_t_t_e_r_>            Mark the current top line with <letter>.
+  M_<_l_e_t_t_e_r_>            Mark the current bottom line with <letter>.
+  '_<_l_e_t_t_e_r_>            Go to a previously marked position.
+  ''                   Go to the previous position.
+  ^X^X                 Same as '.
+  ESC-M_<_l_e_t_t_e_r_>        Clear a mark.
+        ---------------------------------------------------
+        A mark is any upper-case or lower-case letter.
+        Certain marks are predefined:
+             ^  means  beginning of the file
+             $  means  end of the file
+ ---------------------------------------------------------------------------
+
+                        CCHHAANNGGIINNGG FFIILLEESS
+
+  :e [_f_i_l_e]            Examine a new file.
+  ^X^V                 Same as :e.
+  :n                *  Examine the (_N-th) next file from the command line.
+  :p                *  Examine the (_N-th) previous file from the command line.
+  :x                *  Examine the first (or _N-th) file from the command line.
+  :d                   Delete the current file from the command line list.
+  =  ^G  :f            Print current file name.
+ ---------------------------------------------------------------------------
+
+                    MMIISSCCEELLLLAANNEEOOUUSS CCOOMMMMAANNDDSS
+
+  -_<_f_l_a_g_>              Toggle a command line option [see OPTIONS below].
+  --_<_n_a_m_e_>             Toggle a command line option, by name.
+  __<_f_l_a_g_>              Display the setting of a command line option.
+  ___<_n_a_m_e_>             Display the setting of an option, by name.
+  +_c_m_d                 Execute the less cmd each time a new file is examined.
+
+  !_c_o_m_m_a_n_d             Execute the shell command with $SHELL.
+  |XX_c_o_m_m_a_n_d            Pipe file between current pos & mark XX to shell command.
+  s _f_i_l_e               Save input to a file.
+  v                    Edit the current file with $VISUAL or $EDITOR.
+  V                    Print version number of "less".
+ ---------------------------------------------------------------------------
+
+                           OOPPTTIIOONNSS
+
+        Most options may be changed either on the command line,
+        or from within less by using the - or -- command.
+        Options may be given in one of two forms: either a single
+        character preceded by a -, or a name preceded by --.
+
+  -?  ........  --help
+                  Display help (from command line).
+  -a  ........  --search-skip-screen
+                  Search skips current screen.
+  -A  ........  --SEARCH-SKIP-SCREEN
+                  Search starts just after target line.
+  -b [_N]  ....  --buffers=[_N]
+                  Number of buffers.
+  -B  ........  --auto-buffers
+                  Don't automatically allocate buffers for pipes.
+  -c  ........  --clear-screen
+                  Repaint by clearing rather than scrolling.
+  -d  ........  --dumb
+                  Dumb terminal.
+  -D xx_c_o_l_o_r  .  --color=xx_c_o_l_o_r
+                  Set screen colors.
+  -e  -E  ....  --quit-at-eof  --QUIT-AT-EOF
+                  Quit at end of file.
+  -f  ........  --force
+                  Force open non-regular files.
+  -F  ........  --quit-if-one-screen
+                  Quit if entire file fits on first screen.
+  -g  ........  --hilite-search
+                  Highlight only last match for searches.
+  -G  ........  --HILITE-SEARCH
+                  Don't highlight any matches for searches.
+  -h [_N]  ....  --max-back-scroll=[_N]
+                  Backward scroll limit.
+  -i  ........  --ignore-case
+                  Ignore case in searches that do not contain uppercase.
+  -I  ........  --IGNORE-CASE
+                  Ignore case in all searches.
+  -j [_N]  ....  --jump-target=[_N]
+                  Screen position of target lines.
+  -J  ........  --status-column
+                  Display a status column at left edge of screen.
+  -k [_f_i_l_e]  .  --lesskey-file=[_f_i_l_e]
+                  Use a lesskey file.
+  -K  ........  --quit-on-intr
+                  Exit less in response to ctrl-C.
+  -L  ........  --no-lessopen
+                  Ignore the LESSOPEN environment variable.
+  -m  -M  ....  --long-prompt  --LONG-PROMPT
+                  Set prompt style.
+  -n  -N  ....  --line-numbers  --LINE-NUMBERS
+                  Don't use line numbers.
+  -o [_f_i_l_e]  .  --log-file=[_f_i_l_e]
+                  Copy to log file (standard input only).
+  -O [_f_i_l_e]  .  --LOG-FILE=[_f_i_l_e]
+                  Copy to log file (unconditionally overwrite).
+  -p [_p_a_t_t_e_r_n]  --pattern=[_p_a_t_t_e_r_n]
+                  Start at pattern (from command line).
+  -P [_p_r_o_m_p_t]   --prompt=[_p_r_o_m_p_t]
+                  Define new prompt.
+  -q  -Q  ....  --quiet  --QUIET  --silent --SILENT
+                  Quiet the terminal bell.
+  -r  -R  ....  --raw-control-chars  --RAW-CONTROL-CHARS
+                  Output "raw" control characters.
+  -s  ........  --squeeze-blank-lines
+                  Squeeze multiple blank lines.
+  -S  ........  --chop-long-lines
+                  Chop (truncate) long lines rather than wrapping.
+  -t [_t_a_g]  ..  --tag=[_t_a_g]
+                  Find a tag.
+  -T [_t_a_g_s_f_i_l_e] --tag-file=[_t_a_g_s_f_i_l_e]
+                  Use an alternate tags file.
+  -u  -U  ....  --underline-special  --UNDERLINE-SPECIAL
+                  Change handling of backspaces.
+  -V  ........  --version
+                  Display the version number of "less".
+  -w  ........  --hilite-unread
+                  Highlight first new line after forward-screen.
+  -W  ........  --HILITE-UNREAD
+                  Highlight first new line after any forward movement.
+  -x [_N[,...]]  --tabs=[_N[,...]]
+                  Set tab stops.
+  -X  ........  --no-init
+                  Don't use termcap init/deinit strings.
+  -y [_N]  ....  --max-forw-scroll=[_N]
+                  Forward scroll limit.
+  -z [_N]  ....  --window=[_N]
+                  Set size of window.
+  -" [_c[_c]]  .  --quotes=[_c[_c]]
+                  Set shell quote characters.
+  -~  ........  --tilde
+                  Don't display tildes after end of file.
+  -# [_N]  ....  --shift=[_N]
+                  Set horizontal scroll amount (0 = one half screen width).
+                --file-size
+                  Automatically determine the size of the input file.
+                --follow-name
+                  The F command changes files if the input file is renamed.
+                --incsearch
+                  Search file as each pattern character is typed in.
+                --line-num-width=N
+                  Set the width of the -N line number field to N characters.
+                --mouse
+                  Enable mouse input.
+                --no-keypad
+                  Don't send termcap keypad init/deinit strings.
+                --no-histdups
+                  Remove duplicates from command history.
+                --rscroll=C
+                  Set the character used to mark truncated lines.
+                --save-marks
+                  Retain marks across invocations of less.
+                --status-col-width=N
+                  Set the width of the -J status column to N characters.
+                --use-backslash
+                  Subsequent options use backslash as escape char.
+                --use-color
+                  Enables colored text.
+                --wheel-lines=N
+                  Each click of the mouse wheel moves N lines.
+
+
+ ---------------------------------------------------------------------------
+
+                          LLIINNEE EEDDIITTIINNGG
+
+        These keys can be used to edit text being entered 
+        on the "command line" at the bottom of the screen.
+
+ RightArrow ..................... ESC-l ... Move cursor right one character.
+ LeftArrow ...................... ESC-h ... Move cursor left one character.
+ ctrl-RightArrow  ESC-RightArrow  ESC-w ... Move cursor right one word.
+ ctrl-LeftArrow   ESC-LeftArrow   ESC-b ... Move cursor left one word.
+ HOME ........................... ESC-0 ... Move cursor to start of line.
+ END ............................ ESC-$ ... Move cursor to end of line.
+ BACKSPACE ................................ Delete char to left of cursor.
+ DELETE ......................... ESC-x ... Delete char under cursor.
+ ctrl-BACKSPACE   ESC-BACKSPACE ........... Delete word to left of cursor.
+ ctrl-DELETE .... ESC-DELETE .... ESC-X ... Delete word under cursor.
+ ctrl-U ......... ESC (MS-DOS only) ....... Delete entire line.
+ UpArrow ........................ ESC-k ... Retrieve previous command line.
+ DownArrow ...................... ESC-j ... Retrieve next command line.
+ TAB ...................................... Complete filename & cycle.
+ SHIFT-TAB ...................... ESC-TAB   Complete filename & reverse cycle.
+ ctrl-L ................................... Complete filename, list all.

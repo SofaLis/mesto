@@ -31,6 +31,7 @@ export const popupCard = '.popup_cards';
 export const forms = '.popup';
 export const popupImg = '.popup_image';
 export const popupAvatar = '.popup_avatar';
+export const popupDelete = '.popup_delete';
 export const popupUserGuery = document.querySelector('.popup_user');
 export const popupCardGuery = document.querySelector('.popup_cards');
 export const popupImgGuery = document.querySelector('.popup_image');
@@ -54,6 +55,8 @@ export const elements = document.querySelector('.elements');
 
 export const avatar =  document.querySelector('.profile__avatar');
 export const avatarOpened = document.querySelector('.profile__avatar_hover');
+
+
 
 
 export const settingsObject = {
