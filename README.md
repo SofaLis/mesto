@@ -13,4 +13,4 @@
 
 **GitHub Pages**
 
-* [Ссылка на GitHub Pages](https://sofalis.github.io/mestoPr/)
+* [Ссылка на GitHub Pages](https://sofalis.github.io/mesto/)
