@@ -177,7 +177,9 @@ buttonAdd.addEventListener ('click', function () {
 
 let userId;
 
-Promise.all([api.getUserInfo(), api.getInitialCards()])
+Promise.all([
+  api.getUserInfo(), 
+  api.getInitialCards()])
   .then(([user, item]) => {
     userId = user._id;
     userInfo.setUserInfo(user);
