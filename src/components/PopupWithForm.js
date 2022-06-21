@@ -13,7 +13,7 @@ export class PopupWithForm extends Popup {
     Array.from(this._inputList).forEach((input) => {
         this._obj[input.name] = input.value;
     });
-    return this._obj;
+    return this._obj
 }
 
     setEventListeners () {
