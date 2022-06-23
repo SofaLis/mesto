@@ -10,7 +10,7 @@ export class Api {
             headers: this._headers
         })
             .then((res) => {
-            return this._testOk(res)
+            return this._testStatus(res)
             }) 
     }
     //Загрузка карточек с сервера 
@@ -20,7 +20,7 @@ export class Api {
         })
 
         .then((res) => {
-            return this._testOk(res)
+            return this._testStatus(res)
           })
     }
     //Редактирование профиля
@@ -35,7 +35,7 @@ export class Api {
         })
 
         .then((res) => {
-            return this._testOk(res)
+            return this._testStatus(res)
           })
     }
 
@@ -51,7 +51,7 @@ export class Api {
         })
 
         .then((res) => {
-            return this._testOk(res)
+            return this._testStatus(res)
           })
     }
 
@@ -65,7 +65,7 @@ export class Api {
             })
         })
         .then((res) => {
-            return this._testOk(res)
+            return this._testStatus(res)
         })
     }
 
@@ -76,7 +76,7 @@ export class Api {
           headers: this._headers,
         })
         .then((res) => {
-            return this._testOk(res)
+            return this._testStatus(res)
         })
     }
 
@@ -87,7 +87,7 @@ export class Api {
           headers: this._headers,
         })
         .then((res) => {
-            return this._testOk(res)
+            return this._testStatus(res)
         }) 
     }
     //Удаление лайка
@@ -97,11 +97,11 @@ export class Api {
             headers: this._headers,
           })
           .then((res) => {
-              return this._testOk(res)
+              return this._testStatus(res)
           })
     }
 
-    _testOk(res) {
+    _testStatus(res) {
         if (res.ok) { 
             return responce.json();
           } return Promise.reject(`Ошибка: ${res} `)

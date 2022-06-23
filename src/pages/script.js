@@ -22,7 +22,7 @@ formValidatorAvatar.setEventListeners();
 
 //Вызываем класс Api
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-41',
+  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-44',
   headers: {
     authorization: 'e18d6733-db7e-49ed-9171-9d988e951e01',
     'Content-Type': 'application/json'
