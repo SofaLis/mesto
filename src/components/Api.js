@@ -1,20 +1,21 @@
 export class Api {
     constructor(options){
-        this._baseUrl = options.baseUrl;
-        this._headers = options.headers;
-    }
-
+        this._baseUrl = options.baseUrl
+        this._headers = options.headers
+    };
     //Загрузка информации о пользователе с сервера
     getUserInfo() { 
         return fetch(`${this._baseUrl}/users/me`, { 
             headers: this._headers
         })
+
             .then((res) => {
             return this._testStatus(res)
             }) 
-    }
+    };
+
     //Загрузка карточек с сервера 
-    getInitialCards() {ё
+    getInitialCards() {
         return fetch(`${this._baseUrl}/cards`, {
             headers: this._headers
         })
@@ -22,7 +23,8 @@ export class Api {
         .then((res) => {
             return this._testStatus(res)
           })
-    }
+    };
+
     //Редактирование профиля
     editProfile(data) {
         return fetch(`${this._baseUrl}/users/me`, {
@@ -37,7 +39,7 @@ export class Api {
         .then((res) => {
             return this._testStatus(res)
           })
-    }
+    };
 
     //Добавление новой карточки
     addCard (data) {
@@ -53,7 +55,7 @@ export class Api {
         .then((res) => {
             return this._testStatus(res)
           })
-    }
+    };
 
     //Редактирование аватара
     editAvatar(data) {
@@ -67,7 +69,7 @@ export class Api {
         .then((res) => {
             return this._testStatus(res)
         })
-    }
+    };
 
     //Удаление
     deleteCard(cardId) {
@@ -78,7 +80,7 @@ export class Api {
         .then((res) => {
             return this._testStatus(res)
         })
-    }
+    };
 
     //Постановка лайка
     like(cardId) {
@@ -89,7 +91,8 @@ export class Api {
         .then((res) => {
             return this._testStatus(res)
         }) 
-    }
+    };
+
     //Удаление лайка
     dltLike(cardId) {
         return fetch(`${this._baseUrl}cards/${cardId}/likes`, { 
@@ -99,12 +102,13 @@ export class Api {
           .then((res) => {
               return this._testStatus(res)
           })
-    }
+    };
 
+    //Проверяем на ошибку
     _testStatus(res) {
         if (res.ok) { 
             return responce.json();
-          } return Promise.reject(`Ошибка: ${res} `)
+          } return Promise.reject(`${res} `)
     }
 
 

@@ -110,7 +110,7 @@ function handleLikeClick (card) {
       card.like(res)
     })
     .catch((err) => {
-      console.log(`Ошибка: ${err}`)
+      console.log(`${err}`)
     })
   } else {
     api.like(card._cardId)
@@ -118,7 +118,7 @@ function handleLikeClick (card) {
       card.like(res)
     })
     .catch((err) => {
-      console.log(`Ошибка: ${err}`)
+      console.log(`${err}`)
     })
   }
 };
@@ -187,5 +187,5 @@ Promise.all([
     section.rendererOne(item);
   })
   .catch((err) => {
-    console.log(`Ошибка: ${err}`);
+    console.log(`${err}`);
   })
