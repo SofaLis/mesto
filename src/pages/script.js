@@ -96,7 +96,7 @@ const popupWithFormDelete = new popupWithFormDelete(popupDelete);
 popupWithFormDelete.setEventListeners();
 
 //Форма добавления карты
-const popupWithFormCard = new PopupWithForm(popupCard, callbackFormCard)
+const popupWithFormCard = new PopupWithForm(popupCard, callbackFormCard);
 popupWithFormCard.setEventListeners();
 
 function clickImg(item) {
