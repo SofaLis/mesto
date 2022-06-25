@@ -26,7 +26,7 @@ formValidatorAvatar.setEventListeners();
 const api = new Api({
   baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-44',
   headers: {
-    authorization: 'e18d6733-db7e-49ed-9171-9d988e951e01',
+    authorization: '716a14ac-2e8b-4ac9-86a9-ffe832dc7936',
     'Content-Type': 'application/json'
   }
 });
