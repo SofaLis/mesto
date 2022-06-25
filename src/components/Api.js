@@ -27,7 +27,8 @@ export class Api {
 
     //Редактирование профиля
     editProfile(data) {
-        return fetch(`${this._baseUrl}/users/me`, {
+        return fetch(`${this._baseUrl}/users/me`,
+        {
             method: 'PATCH',  
             headers: this._headers,
             body: JSON.stringify({
@@ -35,7 +36,6 @@ export class Api {
                 about: data.jobInput
             })
         })
-
         .then((res) => {
             return this._testStatus(res)
           })
@@ -59,7 +59,8 @@ export class Api {
 
     //Редактирование аватара
     editAvatar(data) {
-        return fetch(`${this._baseUrl}/users/me/avatar`, {
+        return fetch(`${this._baseUrl}/users/me/avatar`, 
+        {
             method: 'PATCH',  
             headers: this._headers,
             body: JSON.stringify({
@@ -107,8 +108,9 @@ export class Api {
     //Проверяем на ошибку
     _testStatus(res) {
         if (res.ok) { 
-            return responce.json();
-          } return Promise.reject(`${res} `)
+            return res.json();
+        }
+        return Promise.reject(`${res.status}`);
     }
 
 

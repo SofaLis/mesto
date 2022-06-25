@@ -12,6 +12,8 @@ import {Card} from '../components/Card.js';
 import {Api} from '../components/Api.js'
 
 import './index.css'
+
+let userId;
 //Валидация
 const formValidatorUser = new FormValidator(validationConfig, popupUserGuery);
 formValidatorUser.setEventListeners();
@@ -105,7 +107,7 @@ function clickImg(item) {
 
 function handleLikeClick (card) {
   if (card.isLiked()) {
-    api.dltLike(card._cardId)
+    api.dltLike(card)
     .then((res) => {
       card.like(res)
     })
@@ -113,7 +115,7 @@ function handleLikeClick (card) {
       console.log(`${err}`)
     })
   } else {
-    api.like(card._cardId)
+    api.like(card)
     .then((res) => {
       card.like(res)
     })
@@ -127,16 +129,16 @@ function handleDeleteIconClick (card) {
   popupWithFormDelete.open()
   popupWithFormDelete.setFormSubmit(() => {
     popupWithFormDelete.renderLoading(true);
-    api.deleteCard(card._cardId)
+    api.deleteCard(card)
     .then((res) => {
       popupWithFormDelete.close()
       card.deleteCard(res)
     })
     .catch((err) => {
-      console.log(`Ошибка: ${err}`)
+      console.log(`${err}`)
     })
     .finally(() => {
-      PopupWithFormDelet.renderLoading(false);
+      popupWithFormDelete.renderLoading(false);
     })
   })
 }
@@ -174,8 +176,6 @@ buttonAdd.addEventListener ('click', function () {
   formValidatorCard.resetValidation();
   popupWithFormCard.open();
 })
-
-let userId;
 
 Promise.all([
   api.getUserInfo(), 

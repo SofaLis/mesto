@@ -11,8 +11,7 @@ export class popupWithFormDelete extends Popup {
             evt.preventDefault();
             this.callbackForm();
             this.close();
-        });
-        
+        });  
     }
   
     setFormSubmit(callbackForm) {
