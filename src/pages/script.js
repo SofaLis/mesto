@@ -10,6 +10,7 @@ import {UserInfo} from '../components/UserInfo.js';
 import { Section } from '../components/Section.js';
 import {Card} from '../components/Card.js';
 import {Api} from '../components/Api.js'
+import {PopupWithFormDelete} from '../components/popupWithFormDelete.js'
 
 import './index.css'
 
@@ -40,8 +41,8 @@ popupWithFormUser.setEventListeners();
 function callbackFormUser (data) {
   popupWithFormUser.renderLoading(true);
   api.editProfile({
-    name: data.nameInput,
-    about: data.jobInput
+    name: data.name,
+    about: data.about
   })
   .then((data) => {
     userInfo.setUserInfo(data);
@@ -94,7 +95,7 @@ const popupWithImage = new PopupWithImage(popupImg);
 popupWithImage.setEventListeners();
 
 //Удаления карточки
-const popupWithFormDelete = new popupWithFormDelete(popupDelete);
+const popupWithFormDelete = new PopupWithFormDelete(popupDelete);
 popupWithFormDelete.setEventListeners();
 
 //Форма добавления карты
@@ -173,6 +174,7 @@ function callbackFormCard (data) {
 }
 
 buttonAdd.addEventListener ('click', function () {
+  console.log('gad')
   formValidatorCard.resetValidation();
   popupWithFormCard.open();
 })

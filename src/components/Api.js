@@ -32,8 +32,8 @@ export class Api {
             method: 'PATCH',  
             headers: this._headers,
             body: JSON.stringify({
-                name: data.nameInput,
-                about: data.jobInput
+                name: data.name,
+                about: data.about
             })
         })
         .then((res) => {

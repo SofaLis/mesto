@@ -1,4 +1,5 @@
-export class popupWithFormDelete extends Popup {
+import Popup from "./Popup.js";
+export class PopupWithFormDelete extends Popup {
     constructor (popupSelector) {
       super (popupSelector);
       this._formCard = document.querySelector('.popup_delete');
