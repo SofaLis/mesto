@@ -21,4 +21,8 @@ export class UserInfo {
     addAvatar(item) {
         this._avatar.src = item.avatarInput;
     };
+
+    id (id) {
+        this._id = id;
+    }
 }

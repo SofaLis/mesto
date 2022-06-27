@@ -108,7 +108,7 @@ function clickImg(item) {
 
 function handleLikeClick (card) {
   if (card.isLiked()) {
-    api.dltLike(card)
+    api.dltLike(card.returnId())
     .then((res) => {
       card.like(res)
     })
@@ -116,7 +116,7 @@ function handleLikeClick (card) {
       console.log(`${err}`)
     })
   } else {
-    api.like(card)
+    api.like(card.returnId())
     .then((res) => {
       card.like(res)
     })
@@ -148,29 +148,42 @@ function createCard (item) {
   const card = new Card({
     item: item, 
     handleCardClick:() => clickImg(item),
-    handleLikeClick: handleLikeClick,
-    handleDeleteIconClick: handleDeleteIconClick
-  }, 
+    handleLikeClick: (item) => handleLikeClick(item),
+    handleDeleteIconClick: (item) => handleDeleteIconClick(item)
+    },
+    userInfo.id(),
     ".template");
   return card.getNewCard();
 };
 
 //Прорисовка карточек из нашего списка
 const section = new Section ({
-  items: initialCards,
+  items: [],
   renderer: (item) => {
     const element = createCard(item)
     section.addItem(element)
   }}, '.elements')
-section.rendererOne()
 
  
 function callbackFormCard (data) {
-  const obj = {};
-  obj.title = data.heading;
-  obj.link = data.subheading;
-  const cardElement = createCard(obj);
-  elements.prepend(cardElement);
+  popupWithFormCard.renderLoading(true)
+  api.addCard({
+    title: data.title,
+    link: data.link
+  })
+  .then((data) => {
+    const item = createCard(data)
+    section.rendererOne(item)
+  })
+  .then(() => {
+    popupWithFormCard.close()
+  })
+  .catch((err) => {
+    console.log(`ошибка ${err}`)
+  })
+  .finally(() => {
+    popupWithFormCard.renderLoading(false)
+  })
 }
 
 buttonAdd.addEventListener ('click', function () {

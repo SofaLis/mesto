@@ -78,5 +78,9 @@ export class Card {
         this._elementCard.remove();
         this._elementCard = null;
     };
+
+    returnId () {
+        return this._Id
+    }
 }
 
