@@ -19,7 +19,7 @@ export class UserInfo {
     };
 
     addAvatar(item) {
-        this._avatar.src = item.avatarInput;
+        this._avatar.src = item.avatar;
     };
 
 }

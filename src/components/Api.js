@@ -64,7 +64,7 @@ export class Api {
             method: 'PATCH',  
             headers: this._headers,
             body: JSON.stringify({
-                avatar: data.avatarInput
+                avatar: data.avatar
             })
         })
         .then((res) => {

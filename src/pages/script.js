@@ -71,7 +71,7 @@ popupWithFormAvatar.setEventListeners();
 function callbackFormAvatar (data) {
   popupWithFormAvatar.renderLoading(true);
   api.editAvatar({
-    avatar: data.avatarInput
+    avatar: data.avatar
   })
   .then((data) => {
     userInfo.addAvatar(data);
