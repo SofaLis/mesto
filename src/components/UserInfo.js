@@ -14,15 +14,12 @@ export class UserInfo {
     };
 
     setUserInfo (item) {
-        this.elementName.textContent = item.nameInput;
-        this.elementInfo.textContent = item.jobInput;
+        this.elementName.textContent = item.name;
+        this.elementInfo.textContent = item.about;
     };
 
     addAvatar(item) {
         this._avatar.src = item.avatarInput;
     };
 
-    id (id) {
-        this._id = id;
-    }
 }
