@@ -40,9 +40,9 @@ export class Card {
 
     _checkIdcard(){ 
         if (this._ownerId !== this._userId) {
-          this._eltmentDelete.classList.add('element__delete_opracity')
+            this._deletbtn.classList.add('element__delete_opracity')
         } else {
-          this._eltmentDelete.classList.remove('element__delete_opracity')
+            this._deletbtn.classList.remove('element__delete_opracity')
         }
     };
 

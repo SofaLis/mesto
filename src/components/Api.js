@@ -19,7 +19,7 @@ export class Api {
         return fetch(`${this._baseUrl}/cards`, {
             headers: this._headers
         })
-        
+
         .then((res) => {
             return this._testStatus(res)
           })
@@ -47,7 +47,7 @@ export class Api {
             method: 'POST',  
             headers: this._headers,
             body: JSON.stringify({
-                title: data.title,
+                name: data.title,
                 link: data.link
             })
         })

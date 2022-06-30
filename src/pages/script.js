@@ -151,7 +151,7 @@ function createCard (item) {
     handleLikeClick: (item) => handleLikeClick(item),
     handleDeleteIconClick: (item) => handleDeleteIconClick(item)
     },
-    userInfo.id(),
+    userId,
     ".template");
   return card.getNewCard();
 };
@@ -175,11 +175,8 @@ function callbackFormCard (data) {
     const item = createCard(data)
     section.rendererOne(item)
   })
-  .then(() => {
-    popupWithFormCard.close()
-  })
   .catch((err) => {
-    console.log(`ошибка ${err}`)
+    console.log(`ошибка добавления карточки ${err}`)
   })
   .finally(() => {
     popupWithFormCard.renderLoading(false)
@@ -187,7 +184,6 @@ function callbackFormCard (data) {
 }
 
 buttonAdd.addEventListener ('click', function () {
-  console.log('gad')
   formValidatorCard.resetValidation();
   popupWithFormCard.open();
 })
