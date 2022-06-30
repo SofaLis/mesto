@@ -159,7 +159,7 @@ function createCard (item) {
 //Прорисовка карточек из нашего списка
 const section = new Section ({
   items: [],
-  renderer: (item) => {
+  renderer: item => {
     const element = createCard(item)
     section.addItem(element)
   }}, '.elements')

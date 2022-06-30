@@ -19,7 +19,7 @@ export class Api {
         return fetch(`${this._baseUrl}/cards`, {
             headers: this._headers
         })
-
+        
         .then((res) => {
             return this._testStatus(res)
           })
