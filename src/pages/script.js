@@ -181,7 +181,7 @@ function callbackFormCard (data) {
   .finally(() => {
     popupWithFormCard.renderLoading(false)
   })
-}
+};
 
 buttonAdd.addEventListener ('click', function () {
   formValidatorCard.resetValidation();
