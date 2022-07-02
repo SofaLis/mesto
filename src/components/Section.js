@@ -6,7 +6,7 @@ export class Section {
     }
 
     addItem (elementDOM) {
-        this._containerSelector.append(elementDOM);
+        this._containerSelector.prepend(elementDOM);
     }
 
     rendererOne () {

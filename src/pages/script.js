@@ -168,12 +168,12 @@ const section = new Section ({
 function callbackFormCard (data) {
   popupWithFormCard.renderLoading(true)
   api.addCard({
-    title: data.title,
-    link: data.link
+    name: data.name,
+    link: data.link,
   })
   .then((data) => {
     const item = createCard(data)
-    section.rendererOne(item)
+    section.addItem(item)
   })
   .catch((err) => {
     console.log(`ошибка добавления карточки ${err}`)
