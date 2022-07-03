@@ -1,8 +1,9 @@
 export class UserInfo {
-    constructor(elementName, elementInfo, avatar) {
+    constructor(elementName, elementInfo, avatar, id) {
         this.elementName =  elementName;
         this.elementInfo = elementInfo;
         this._avatar = avatar;
+        this._userId = null;
     };
 
     getUserInfo () {
@@ -20,6 +21,11 @@ export class UserInfo {
 
     addAvatar(item) {
         this._avatar.src = item.avatar;
+        this._avatar.alt = item.name
     };
+
+    setId (item) {
+        this._userId = item._id;
+    }
 
 }

@@ -19,12 +19,12 @@ export class PopupWithFormDelete extends Popup {
         this.callbackForm = callbackForm
     }
   
-    renderLoading(isLoading) {
+    renderLoading (isLoading) {
       if (isLoading) {
-        this._buttonSubmit.textContent = "Сохранение...";
+          this._submitButton.textContent = 'Сохранение...';
       } else {
-        this._buttonSubmit.textContent = "Да";
+          this._submitButton.textContent = 'Да'
       }
-    }
+  }
   
   }

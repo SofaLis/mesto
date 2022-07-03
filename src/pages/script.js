@@ -33,7 +33,7 @@ const api = new Api({
 });
 
 //User info//
-const userInfo = new UserInfo(userName, userJop, avatar);
+const userInfo = new UserInfo(userName, userJop, avatar, userId);
 //Форма изменения ника и описания
 const popupWithFormUser = new PopupWithForm(popupUser, callbackFormUser)
 popupWithFormUser.setEventListeners();
@@ -110,18 +110,20 @@ function handleLikeClick (card) {
   if (card.isLiked()) {
     api.dltLike(card.returnId())
     .then((res) => {
-      card.like(res)
+      card.deletelike()
+      card.countLike(res.likes)
     })
     .catch((err) => {
-      console.log(`${err}`)
+      console.log(`ошибка удаления лайка ${err}`)
     })
   } else {
     api.like(card.returnId())
     .then((res) => {
-      card.like(res)
+      card.addlike()
+      card.countLike(res.likes)
     })
     .catch((err) => {
-      console.log(`${err}`)
+      console.log(`ошибка добавления лайка ${err}`)
     })
   }
 };
@@ -159,7 +161,7 @@ function createCard (item) {
 //Прорисовка карточек из нашего списка
 const section = new Section ({
   items: [],
-  renderer: item => {
+  renderer: (item) => {
     const element = createCard(item)
     section.addItem(element)
   }}, '.elements')
@@ -195,8 +197,9 @@ Promise.all([
     userId = user._id;
     userInfo.setUserInfo(user);
     userInfo.addAvatar(user);
+    userInfo.setId(user)
     section.rendererOne(item);
   })
-  .catch((err) => {
-    console.log(`${err}`);
-  })
+  //.catch((err) => {
+    //console.log(`${err}`);
+  //})

@@ -19,4 +19,3 @@
 
 * [Ссылка на GitHub Pages](https://sofalis.github.io/mesto/)
 
-
