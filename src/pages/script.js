@@ -128,17 +128,17 @@ function handleLikeClick (card) {
   }
 };
 
-function handleDeleteIconClick (card) {
+function handleDeleteIconClick (cardId) {
   popupWithFormDelete.open()
   popupWithFormDelete.setFormSubmit(() => {
     popupWithFormDelete.renderLoading(true);
-    api.deleteCard(card)
+    api.deleteCard(cardId)
     .then((res) => {
       popupWithFormDelete.close()
-      card.deleteCard(res)
+      cardId.deleteCard(res)
     })
     .catch((err) => {
-      console.log(`${err}`)
+      console.log(`Упс...Проблемы с удалением карточки ${err}`)
     })
     .finally(() => {
       popupWithFormDelete.renderLoading(false);
@@ -150,11 +150,13 @@ function createCard (item) {
   const card = new Card({
     item: item, 
     handleCardClick:() => clickImg(item),
-    handleLikeClick: (item) => handleLikeClick(item),
-    handleDeleteIconClick: (item) => handleDeleteIconClick(item)
+    handleLikeClick: () => handleLikeClick(card),
+    handleDeleteIconClick: (cardId) => handleDeleteIconClick(cardId)
     },
     userId,
     ".template");
+    console.log(userId)
+    console.log(item.owner._id)
   return card.getNewCard();
 };
 
@@ -197,9 +199,10 @@ Promise.all([
     userId = user._id;
     userInfo.setUserInfo(user);
     userInfo.addAvatar(user);
-    userInfo.setId(user)
     section.rendererOne(item);
   })
-  //.catch((err) => {
-    //console.log(`${err}`);
-  //})
+  .catch((err) => {
+    console.log(`${err}`);
+  })
+
+  
