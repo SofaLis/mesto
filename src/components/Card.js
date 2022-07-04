@@ -59,11 +59,13 @@ export class Card {
 
     addlike() {
         this._likebtn.classList.add('element__button_active');
+        this._btnLickNum.textContent = this._likes.length;
         this._isLiked = true
     };
 
     deletelike() {
         this._likebtn.classList.remove('element__button_active');
+        this._btnLickNum.textContent = this._likes.length;
         this._isLiked = false
     };
 
