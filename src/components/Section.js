@@ -8,6 +8,10 @@ export class Section {
         this._containerSelector.prepend(elementDOM);
     }
 
+    addItemServer (elementDOM) {
+        this._containerSelector.append(elementDOM);
+    }
+
     rendererOne (items) {
         items.forEach(item =>  this._renderer(item));
     }

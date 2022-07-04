@@ -176,7 +176,7 @@ function callbackFormCard (data) {
   })
   .then((data) => {
     const item = createCard(data)
-    section.addItem(item)
+    section.addItemServer(item)
   })
   .catch((err) => {
     console.log(`ошибка добавления карточки ${err}`)
