@@ -81,7 +81,7 @@ export class Card {
     }
     //Проверка на ID
     _checkIdcard() { 
-        if (this._ownerId !== this._userId) {
+        if (this._ownerid !== this._userId) {
             this._deletbtn.classList.add('element__delete_opracity')
         } else {
             this._deletbtn.classList.remove('element__delete_opracity')

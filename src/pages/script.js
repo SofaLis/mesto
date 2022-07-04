@@ -156,7 +156,6 @@ function createCard (item) {
     ".template");
     console.log(userId)
     console.log(item.owner._id)
-    console.log(item._id)
   return card.getNewCard();
 };
 
