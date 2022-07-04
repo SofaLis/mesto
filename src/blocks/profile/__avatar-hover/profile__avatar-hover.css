@@ -1,7 +1,7 @@
 .profile__avatar-hover {
     opacity: 0;
     background-color: rgba(0, 0, 0);
-    background-image: url(../../../../images/avatar-hover.png);
+    background-image: url(../../../images/avatar-hover.png);
     background-repeat: no-repeat;
     background-position: center;
     border: none;
