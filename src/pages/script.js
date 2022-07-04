@@ -164,7 +164,7 @@ const section = new Section ({
   items: [],
   renderer: (item) => {
     const element = createCard(item)
-    section.addItem(element)
+    section.addItemServer(element)
   }}, '.elements')
 
  
@@ -176,7 +176,7 @@ function callbackFormCard (data) {
   })
   .then((data) => {
     const item = createCard(data)
-    section.addItemServer(item)
+    section.addItem(item)
   })
   .catch((err) => {
     console.log(`ошибка добавления карточки ${err}`)
