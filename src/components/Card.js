@@ -35,7 +35,7 @@ export class Card {
         this._likeNum = this._elementCard.querySelector('.element__like');
         this._checkLike();
         this._setEventListeners();
-        //this._checkIdcard();
+        this._checkIdcard();
         this._imgCard.src = this._link;
         this._imgCard.alt = this._name;
         this._nameCard.textContent =  this._name;
@@ -81,10 +81,10 @@ export class Card {
     }
     //Проверка на ID
     _checkIdcard() { 
-        if (this._ownerId === this._userId) {
-            this._deletbtn.classList.remove('element__delete_opracity')
-        } else {
+        if (this._ownerId !== this._userId) {
             this._deletbtn.classList.add('element__delete_opracity')
+        } else {
+            this._deletbtn.classList.remove('element__delete_opracity')
         }
     };
 }
