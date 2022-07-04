@@ -54,7 +54,7 @@ export const imgBig = document.querySelector('.popup__image');
 export const elements = document.querySelector('.elements');
 
 export const avatar =  document.querySelector('.profile__avatar');
-export const avatarOpened = document.querySelector('.profile__avatar_hover');
+export const avatarOpened = document.querySelector('.profile__avatar-hover');
 
 
 
