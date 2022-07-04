@@ -128,35 +128,35 @@ function handleLikeClick (card) {
   }
 };
 
-function handleDeleteIconClick (cardId) {
-  popupWithFormDelete.open()
-  popupWithFormDelete.setFormSubmit(() => {
-    popupWithFormDelete.renderLoading(true);
-    api.deleteCard(cardId)
-    .then((res) => {
-      popupWithFormDelete.close()
-      cardId.deleteCard(res)
-    })
-    .catch((err) => {
-      console.log(`Упс...Проблемы с удалением карточки ${err}`)
-    })
-    .finally(() => {
-      popupWithFormDelete.renderLoading(false);
-    })
-  })
-}
 //Функция создания карты
 function createCard (item) {
   const card = new Card({
     item: item, 
     handleCardClick:() => clickImg(item),
     handleLikeClick: () => handleLikeClick(card),
-    handleDeleteIconClick: (cardId) => handleDeleteIconClick(cardId)
+    handleDeleteIconClick: (cardId) => {
+      popupWithFormDelete.open()
+      popupWithFormDelete.setFormSubmit(() => {
+        popupWithFormDelete.renderLoading(true);
+        api.deleteCard(cardId)
+        .then((res) => {
+          popupWithFormDelete.close()
+          card.deleteCard(res)
+        })
+        .catch((err) => {
+          console.log(`Упс...Проблемы с удалением карточки ${err}`)
+        })
+        .finally(() => {
+          popupWithFormDelete.renderLoading(false);
+        })
+      })
+    }
     },
     userId,
     ".template");
     console.log(userId)
     console.log(item.owner._id)
+    console.log(item._id)
   return card.getNewCard();
 };
 
@@ -185,6 +185,7 @@ function callbackFormCard (data) {
   .finally(() => {
     popupWithFormCard.renderLoading(false)
   })
+  console.log("I work")
 };
 
 buttonAdd.addEventListener ('click', function () {

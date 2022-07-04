@@ -3,6 +3,7 @@ export class Api {
         this._baseUrl = options.baseUrl
         this._headers = options.headers
     };
+    
     //Загрузка информации о пользователе с сервера
     getUserInfo() { 
         return fetch(`${this._baseUrl}/users/me`, { 
@@ -74,7 +75,7 @@ export class Api {
 
     //Удаление
     deleteCard(cardId) {
-        return fetch(`${this._baseUrl}cards/${cardId}`, { 
+        return fetch(`${this._baseUrl}/cards/${cardId}`, { 
           method: 'DELETE', 
           headers: this._headers,
         })
@@ -85,7 +86,7 @@ export class Api {
 
     //Постановка лайка
     like(cardId) {
-        return fetch(`${this._baseUrl}cards/${cardId}/likes`, { 
+        return fetch(`${this._baseUrl}/cards/${cardId}/likes`, { 
           method: 'PUT', 
           headers: this._headers,
         })
@@ -96,7 +97,7 @@ export class Api {
 
     //Удаление лайка
     dltLike(cardId) {
-        return fetch(`${this._baseUrl}cards/${cardId}/likes`, { 
+        return fetch(`${this._baseUrl}/cards/${cardId}/likes`, { 
             method: 'DELETE', 
             headers: this._headers,
           })
