@@ -46,6 +46,7 @@ function callbackFormUser (data) {
   })
   .then((data) => {
     userInfo.setUserInfo(data);
+    popupWithFormUser.close()
   })
   .catch((err) => {
     console.log(`Ошибка: ${err}`);
@@ -72,6 +73,10 @@ function callbackFormAvatar (data) {
   popupWithFormAvatar.renderLoading(true);
   api.editAvatar({
     avatar: data.avatar
+  })
+  .then((data) => {
+    userInfo.addAvatar(data);
+    popupWithFormAvatar.close()
   })
   .then((data) => {
     userInfo.addAvatar(data);
@@ -161,7 +166,6 @@ function createCard (item) {
 
 //Прорисовка карточек из нашего списка
 const section = new Section ({
-  items: [],
   renderer: (item) => {
     const element = createCard(item)
     section.addItemServer(element)
@@ -177,6 +181,7 @@ function callbackFormCard (data) {
   .then((data) => {
     const item = createCard(data)
     section.addItem(item)
+    popupWithFormCard.close()
   })
   .catch((err) => {
     console.log(`ошибка добавления карточки ${err}`)
