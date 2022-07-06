@@ -2,7 +2,7 @@ import Popup from "./Popup.js";
 export class PopupWithFormDelete extends Popup {
     constructor (popupElement) {
       super (popupElement);
-      this._formCard = document.querySelector(popupElement);
+      this._formCard = document.querySelector('.popup__form');
       this._submitButton = this._formCard.querySelector('.popup__submit-button');
     }
 
@@ -11,7 +11,6 @@ export class PopupWithFormDelete extends Popup {
         this._formCard.addEventListener('submit', (evt) => {
             evt.preventDefault();
             this.callbackForm();
-            this.close();
         });  
     }
   
