@@ -2,7 +2,7 @@ import Popup from "./Popup.js";
 export class PopupWithFormDelete extends Popup {
     constructor (popupElement) {
       super (popupElement);
-      this._formCard = document.querySelector('.popup__form');
+      this._formCard = this._popupElement.querySelector('.popup__form');
       this._submitButton = this._formCard.querySelector('.popup__submit-button');
     }
 
